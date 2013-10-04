@@ -359,7 +359,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event){
 void MainWindow::on_pushButton_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C2 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C2 -11.mp3"));
     player->setVolume(50);
     player->play();
     //MainWindow::key->play();
@@ -370,7 +370,7 @@ void MainWindow::on_pushButton_pressed()
 void MainWindow::on_pushButton_2_pressed()
 {
     QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D2 -11.wav"));
+    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D2 -11.mp3"));
     player2->setVolume(50);
     player2->play();
 }
@@ -378,7 +378,7 @@ void MainWindow::on_pushButton_2_pressed()
 void MainWindow::on_pushButton_3_pressed()
 {
     QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E2 -11.wav"));
+    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E2 -11.mp3"));
     player2->setVolume(50);
     player2->play();
 }
@@ -387,7 +387,7 @@ void MainWindow::on_pushButton_3_pressed()
 void MainWindow::on_pushButton_4_pressed()
 {
     QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F2 -11.wav"));
+    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F2 -11.mp3"));
     player2->setVolume(50);
     player2->play();
 }
@@ -395,7 +395,7 @@ void MainWindow::on_pushButton_4_pressed()
 void MainWindow::on_pushButton_5_pressed()
 {
     QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G2 -11.wav"));
+    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G2 -11.mp3"));
     player2->setVolume(50);
     player2->play();
 }
@@ -404,7 +404,7 @@ void MainWindow::on_pushButton_5_pressed()
 void MainWindow::on_pushButton_6_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A2 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A2 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -412,7 +412,7 @@ void MainWindow::on_pushButton_6_pressed()
 void MainWindow::on_pushButton_7_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 B2 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B2 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -420,7 +420,7 @@ void MainWindow::on_pushButton_7_pressed()
 void MainWindow::on_pushButton_8_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -428,7 +428,7 @@ void MainWindow::on_pushButton_8_pressed()
 void MainWindow::on_pushButton_9_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -436,7 +436,7 @@ void MainWindow::on_pushButton_9_pressed()
 void MainWindow::on_pushButton_10_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -444,7 +444,7 @@ void MainWindow::on_pushButton_10_pressed()
 void MainWindow::on_pushButton_11_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -452,7 +452,7 @@ void MainWindow::on_pushButton_11_pressed()
 void MainWindow::on_pushButton_12_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -460,7 +460,7 @@ void MainWindow::on_pushButton_12_pressed()
 void MainWindow::on_pushButton_13_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -468,7 +468,7 @@ void MainWindow::on_pushButton_13_pressed()
 void MainWindow::on_pushButton_14_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 B3 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B3 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -476,7 +476,7 @@ void MainWindow::on_pushButton_14_pressed()
 void MainWindow::on_pushButton_15_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -484,7 +484,7 @@ void MainWindow::on_pushButton_15_pressed()
 void MainWindow::on_pushButton_16_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -492,7 +492,7 @@ void MainWindow::on_pushButton_16_pressed()
 void MainWindow::on_pushButton_17_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -500,7 +500,7 @@ void MainWindow::on_pushButton_17_pressed()
 void MainWindow::on_pushButton_18_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -508,7 +508,7 @@ void MainWindow::on_pushButton_18_pressed()
 void MainWindow::on_pushButton_19_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -516,7 +516,7 @@ void MainWindow::on_pushButton_19_pressed()
 void MainWindow::on_pushButton_20_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -524,7 +524,7 @@ void MainWindow::on_pushButton_20_pressed()
 void MainWindow::on_pushButton_21_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 B4 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B4 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -532,7 +532,7 @@ void MainWindow::on_pushButton_21_pressed()
 void MainWindow::on_pushButton_22_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -540,7 +540,7 @@ void MainWindow::on_pushButton_22_pressed()
 void MainWindow::on_pushButton_23_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -548,7 +548,7 @@ void MainWindow::on_pushButton_23_pressed()
 void MainWindow::on_pushButton_24_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -556,7 +556,7 @@ void MainWindow::on_pushButton_24_pressed()
 void MainWindow::on_pushButton_25_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -564,7 +564,7 @@ void MainWindow::on_pushButton_25_pressed()
 void MainWindow::on_pushButton_26_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -572,7 +572,7 @@ void MainWindow::on_pushButton_26_pressed()
 void MainWindow::on_pushButton_27_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -580,7 +580,7 @@ void MainWindow::on_pushButton_27_pressed()
 void MainWindow::on_pushButton_28_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 B5 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B5 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
@@ -588,7 +588,7 @@ void MainWindow::on_pushButton_28_pressed()
 void MainWindow::on_pushButton_29_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C6 -11.wav"));
+    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C6 -11.mp3"));
     player->setVolume(50);
     player->play();
 }
