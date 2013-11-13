@@ -1,15 +1,20 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "sounds.h"
 //#include <QtMultimedia/QAudioOutput>
 #include <QtMultimedia/QMediaPlayer>
 #include <QEvent>
 #include <QKeyEvent>
+#include <QDir>
+#include <QMediaPlayerControl>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    samples = new Sounds;
    /* QMediaPlayer* key = new QMediaPlayer;
     key->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C2 -11.wav"));
     key->setVolume(50);
@@ -21,676 +26,773 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-/*
-void MainWindow::on_pushButton_pressed()
+
+void MainWindow::on_pushButton_C1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C3 -11.wav"));
-    player->setVolume(50);
-    player->play();
-
-}
-
-
-void MainWindow::on_pushButton_2_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C#3 -11.wav"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-void MainWindow::on_pushButton_3_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D3 -11.wav"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-
-void MainWindow::on_pushButton_4_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D#3 -11.wav"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-void MainWindow::on_pushButton_5_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E3 -11.wav"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-
-void MainWindow::on_pushButton_6_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[0])));
     player->setVolume(50);
     player->play();
 }
 
-void MainWindow::on_pushButton_7_pressed()
+void MainWindow::on_pushButton_CS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F#3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[1])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_8_pressed()
+void MainWindow::on_pushButton_D1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[2])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_9_pressed()
+void MainWindow::on_pushButton_DS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G#3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[3])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_10_pressed()
+void MainWindow::on_pushButton_E1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[4])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_11_pressed()
+void MainWindow::on_pushButton_F1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A#3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[5])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_12_pressed()
+void MainWindow::on_pushButton_FS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 B3 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[6])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_13_pressed()
+void MainWindow::on_pushButton_G1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[7])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_14_pressed()
+void MainWindow::on_pushButton_GS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C#4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[8])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_15_pressed()
+void MainWindow::on_pushButton_A1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[9])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_16_pressed()
+void MainWindow::on_pushButton_AS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D#4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[10])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_17_pressed()
+void MainWindow::on_pushButton_B1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[11])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_18_pressed()
+void MainWindow::on_pushButton_C2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[12])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_19_pressed()
+void MainWindow::on_pushButton_CS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 F#4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[13])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_20_pressed()
+void MainWindow::on_pushButton_D2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[14])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_21_pressed()
+void MainWindow::on_pushButton_DS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 G#4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[15])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_22_pressed()
+void MainWindow::on_pushButton_E2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[16])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_23_pressed()
+void MainWindow::on_pushButton_F2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 A#4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[17])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_24_pressed()
+void MainWindow::on_pushButton_FS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 B4 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[18])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_25_pressed()
+void MainWindow::on_pushButton_G2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C5 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[19])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_26_pressed()
+void MainWindow::on_pushButton_GS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C#5 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[20])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_27_pressed()
+void MainWindow::on_pushButton_A2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D5 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[21])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_28_pressed()
+void MainWindow::on_pushButton_AS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 D#5 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[22])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
 
-void MainWindow::on_pushButton_29_pressed()
+void MainWindow::on_pushButton_B2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 E5 -11.wav"));
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[23])));
     player->setVolume(50);
+  //player->setPlaybackRate(500);
     player->play();
 }
+
+void MainWindow::on_pushButton_C3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[24])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_CS3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[25])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_D3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[26])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_DS3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[27])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_E3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[28])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_F3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[29])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_FS3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[30])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_G3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[31])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_GS3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[32])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_A3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[33])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_AS3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[34])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_B3_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[35])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_C4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[36])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_CS4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[37])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_D4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[38])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_DS4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[39])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_E4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[40])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_F4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[41])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_FS4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[42])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_G4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[43])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_GS4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[44])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_A4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[45])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_AS4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[46])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_B4_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[47])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_C5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[48])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_CS5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[49])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_D5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[50])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_DS5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[51])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_E5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[52])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_F5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[53])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_FS5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[54])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_G5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[55])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_GS5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[56])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_A5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[57])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_AS5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[58])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_B5_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[59])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+void MainWindow::on_pushButton_C6_pressed()
+{
+    QMediaPlayer* player = new QMediaPlayer;
+    player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[60])));
+    player->setVolume(50);
+  //player->setPlaybackRate(500);
+    player->play();
+}
+
+
+
+
+
 
 void MainWindow::keyPressEvent(QKeyEvent* event){
    // QKeyEvent* event = new QKeyEvent;
     switch (event->key()) {
+
+    case 0x31: // 1
+        if (event->modifiers())
+            MainWindow::on_pushButton_CS1_pressed();
+        else
+            MainWindow::on_pushButton_C1_pressed();
+        break;
+
+    case 0x32: // 2
+        if (event->modifiers())
+            MainWindow::on_pushButton_DS1_pressed();
+        else
+            MainWindow::on_pushButton_D1_pressed();
+        break;
+
+    case 0x33: // 3
+        MainWindow::on_pushButton_E1_pressed();
+        break;
+
+    case 0x34: // 4
+        if (event->modifiers())
+            MainWindow::on_pushButton_FS1_pressed();
+        else
+            MainWindow::on_pushButton_F1_pressed();
+        break;
+    case 0x35: // 5
+        if (event->modifiers())
+            MainWindow::on_pushButton_GS1_pressed();
+        else
+            MainWindow::on_pushButton_G1_pressed();
+        break;
+    case 0x36: // 6
+        if (event->modifiers())
+            MainWindow::on_pushButton_AS1_pressed();
+        else
+            MainWindow::on_pushButton_A1_pressed();
+        break;
+    case 0x37: // 7
+            MainWindow::on_pushButton_B1_pressed();;
+        break;
+    case 0x38: // 8
+        if (event->modifiers())
+            MainWindow::on_pushButton_CS2_pressed();
+        else
+            MainWindow::on_pushButton_C2_pressed();
+        break;
+    case 0x39: // 9
+        if (event->modifiers())
+            MainWindow::on_pushButton_DS2_pressed();
+        else
+            MainWindow::on_pushButton_D2_pressed();
+    break;
+    case 0x30: // 0
+        MainWindow::on_pushButton_E2_pressed();
+        break;
     case 0x51: //q
-        MainWindow::on_pushButton_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_FS2_pressed();
+        else
+            MainWindow::on_pushButton_F2_pressed();
         break;
     case 0x57: //w
-        MainWindow::on_pushButton_2_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_GS2_pressed();
+        else
+            MainWindow::on_pushButton_G2_pressed();
         break;
      case 0x45: //e
-        MainWindow::on_pushButton_3_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_AS2_pressed();
+        else
+            MainWindow::on_pushButton_A2_pressed();
         break;
      case 0x52: //r
-        MainWindow::on_pushButton_4_pressed();
+            MainWindow::on_pushButton_B2_pressed();
         break;
      case 0x54: //t
-        MainWindow::on_pushButton_5_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_CS3_pressed();
+        else
+            MainWindow::on_pushButton_C3_pressed();
         break;
     case 0x59: //y
-        MainWindow::on_pushButton_6_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_DS3_pressed();
+        else
+            MainWindow::on_pushButton_D3_pressed();
         break;
     case 0x55: //u
-        MainWindow::on_pushButton_7_pressed();
+            MainWindow::on_pushButton_E3_pressed();
         break;
     case 0x49: //i
-        MainWindow::on_pushButton_8_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_FS3_pressed();
+        else
+            MainWindow::on_pushButton_F3_pressed();
         break;
     case 0x4f: //o
-        MainWindow::on_pushButton_9_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_GS3_pressed();
+        else
+            MainWindow::on_pushButton_G3_pressed();
         break;
     case 0x50: //p
-        MainWindow::on_pushButton_10_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_AS3_pressed();
+        else
+            MainWindow::on_pushButton_A3_pressed();
         break;
     case 0x41: //a
-        MainWindow::on_pushButton_11_pressed();
+            MainWindow::on_pushButton_B3_pressed();
         break;
     case 0x53: //s
-        MainWindow::on_pushButton_12_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_CS4_pressed();
+        else
+            MainWindow::on_pushButton_C4_pressed();
         break;
     case 0x44: //d
-        MainWindow::on_pushButton_13_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_DS4_pressed();
+        else
+            MainWindow::on_pushButton_D4_pressed();
         break;
     case 0x46: //f
-        MainWindow::on_pushButton_14_pressed();
+            MainWindow::on_pushButton_E4_pressed();
         break;
     case 0x47: //g
-        MainWindow::on_pushButton_15_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_FS4_pressed();
+        else
+            MainWindow::on_pushButton_F4_pressed();
         break;
     case 0x48: //h
-        MainWindow::on_pushButton_16_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_GS4_pressed();
+        else
+            MainWindow::on_pushButton_G4_pressed();
         break;
     case 0x4a: //j
-        MainWindow::on_pushButton_17_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_AS4_pressed();
+        else
+            MainWindow::on_pushButton_A4_pressed();
         break;
     case 0x4b: //k
-        MainWindow::on_pushButton_18_pressed();
+            MainWindow::on_pushButton_B4_pressed();
         break;
     case 0x4c: //l
-        MainWindow::on_pushButton_19_pressed();
-        break;
-    case 0x3b: //;
-        MainWindow::on_pushButton_20_pressed();
-        break;
-    case 0x5a: //z
-        MainWindow::on_pushButton_21_pressed();
-        break;
-    case 0x58: //x
-        MainWindow::on_pushButton_22_pressed();
-        break;
-    case 0x43: //c
-        MainWindow::on_pushButton_23_pressed();
-        break;
-    case 0x56: //v
-        MainWindow::on_pushButton_24_pressed();
-        break;
-    case 0x42: //b
-        MainWindow::on_pushButton_25_pressed();
-        break;
-    case 0x4e: //n
-        MainWindow::on_pushButton_26_pressed();
-        break;
-    case 0x4d: //m
-        MainWindow::on_pushButton_27_pressed();
-        break;
-    case 0x2c: //,
-        MainWindow::on_pushButton_28_pressed();
-        break;
-    case 0x2e: //.
-        MainWindow::on_pushButton_29_pressed();
-        break;
-
-
-        default:
-            break;
-    }
-}
-*/
-
-void MainWindow::on_pushButton_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C2 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-    //MainWindow::key->play();
-
-}
-
-
-void MainWindow::on_pushButton_2_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D2 -11.mp3"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-void MainWindow::on_pushButton_3_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E2 -11.mp3"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-
-void MainWindow::on_pushButton_4_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F2 -11.mp3"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-void MainWindow::on_pushButton_5_pressed()
-{
-    QMediaPlayer* player2 = new QMediaPlayer;
-    player2->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G2 -11.mp3"));
-    player2->setVolume(50);
-    player2->play();
-}
-
-
-void MainWindow::on_pushButton_6_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A2 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_7_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B2 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_8_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_9_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_10_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_11_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_12_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_13_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_14_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B3 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_15_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_16_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_17_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_18_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_19_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_20_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_21_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B4 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_22_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_23_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 D5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_24_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 E5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_25_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 F5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_26_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 G5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_27_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 A5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_28_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 B5 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::on_pushButton_29_pressed()
-{
-    QMediaPlayer* player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Desktop/piano/Samples/WEP sus m3 C6 -11.mp3"));
-    player->setVolume(50);
-    player->play();
-}
-
-void MainWindow::keyPressEvent(QKeyEvent* event){
-   // QKeyEvent* event = new QKeyEvent;
-    switch (event->key()) {
-    case 0x51: //q
-        MainWindow::on_pushButton_pressed();
-        break;
-    case 0x57: //w
-        MainWindow::on_pushButton_2_pressed();
-        break;
-     case 0x45: //e
-        MainWindow::on_pushButton_3_pressed();
-        break;
-     case 0x52: //r
-        MainWindow::on_pushButton_4_pressed();
-        break;
-     case 0x54: //t
-        MainWindow::on_pushButton_5_pressed();
-        break;
-    case 0x59: //y
-        MainWindow::on_pushButton_6_pressed();
-        break;
-    case 0x55: //u
-        MainWindow::on_pushButton_7_pressed();
-        break;
-    case 0x49: //i
-        MainWindow::on_pushButton_8_pressed();
-        break;
-    case 0x4f: //o
-        MainWindow::on_pushButton_9_pressed();
-        break;
-    case 0x50: //p
-        MainWindow::on_pushButton_10_pressed();
-        break;
-    case 0x41: //a
-        MainWindow::on_pushButton_11_pressed();
-        break;
-    case 0x53: //s
-        MainWindow::on_pushButton_12_pressed();
-        break;
-    case 0x44: //d
-        MainWindow::on_pushButton_13_pressed();
-        break;
-    case 0x46: //f
-        MainWindow::on_pushButton_14_pressed();
-        break;
-    case 0x47: //g
-        MainWindow::on_pushButton_15_pressed();
-        break;
-    case 0x48: //h
-        MainWindow::on_pushButton_16_pressed();
-        break;
-    case 0x4a: //j
-        MainWindow::on_pushButton_17_pressed();
-        break;
-    case 0x4b: //k
-        MainWindow::on_pushButton_18_pressed();
-        break;
-    case 0x4c: //l
-        MainWindow::on_pushButton_19_pressed();
-        break;
-    case 0x3b: //;
-        MainWindow::on_pushButton_20_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_CS5_pressed();
+        else
+            MainWindow::on_pushButton_C5_pressed();
         break;
     case 0x5a: //z
-        MainWindow::on_pushButton_21_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_DS5_pressed();
+        else
+            MainWindow::on_pushButton_D5_pressed();
         break;
     case 0x58: //x
-        MainWindow::on_pushButton_22_pressed();
+            MainWindow::on_pushButton_E5_pressed();
         break;
     case 0x43: //c
-        MainWindow::on_pushButton_23_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_FS5_pressed();
+        else
+            MainWindow::on_pushButton_F5_pressed();
         break;
     case 0x56: //v
-        MainWindow::on_pushButton_24_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_GS5_pressed();
+        else
+            MainWindow::on_pushButton_G5_pressed();
         break;
     case 0x42: //b
-        MainWindow::on_pushButton_25_pressed();
+        if (event->modifiers())
+            MainWindow::on_pushButton_AS5_pressed();
+        else
+            MainWindow::on_pushButton_A5_pressed();
         break;
     case 0x4e: //n
-        MainWindow::on_pushButton_26_pressed();
+            MainWindow::on_pushButton_B5_pressed();
         break;
     case 0x4d: //m
-        MainWindow::on_pushButton_27_pressed();
-        break;
-    case 0x2c: //,
-        MainWindow::on_pushButton_28_pressed();
-        break;
-    case 0x2e: //.
-        MainWindow::on_pushButton_29_pressed();
+            MainWindow::on_pushButton_C6_pressed();
         break;
 
-
-        default:
-            break;
+    default:
+        break;
     }
 }
 
 
+void MainWindow::on_pushButton_Wurlitzer_clicked()
+{
+    samples->setSound(1);
+}
 
+void MainWindow::on_pushButton_Vibes_clicked()
+{
+    samples->setSound(2);
+}
 
+void MainWindow::on_pushButton_clicked()
+{
+    samples->setSound(5);
+}
 
+void MainWindow::on_pushButton_2_clicked()
+{
+    samples->setSound(6);
+}

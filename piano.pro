@@ -12,10 +12,15 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = piano
 TEMPLATE = app
 
+RESOURCES =
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    sounds.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    sounds.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES +=
