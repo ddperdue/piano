@@ -7,6 +7,7 @@
 #include <QKeyEvent>
 #include <QDir>
 #include <QMediaPlayerControl>
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,11 +15,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    volume = 50;
+
     samples = new Sounds;
-   /* QMediaPlayer* key = new QMediaPlayer;
-    key->setMedia(QUrl::fromLocalFile("/Users/DanPerdue/Music/Scarbee 16/Samples/EEP/Sustained/M/WEP sus m3 C2 -11.wav"));
-    key->setVolume(50);
-    key->play();*/
+
 }
 
 MainWindow::~MainWindow()
@@ -31,16 +31,17 @@ void MainWindow::on_pushButton_C1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[0])));
-    player->setVolume(50);
+    player->setVolume(volume);
     player->play();
+    std::cout << player->PlayingState;
+
 }
 
 void MainWindow::on_pushButton_CS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[1])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -48,8 +49,7 @@ void MainWindow::on_pushButton_D1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[2])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -57,8 +57,7 @@ void MainWindow::on_pushButton_DS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[3])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -66,8 +65,7 @@ void MainWindow::on_pushButton_E1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[4])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -75,8 +73,7 @@ void MainWindow::on_pushButton_F1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[5])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -84,8 +81,7 @@ void MainWindow::on_pushButton_FS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[6])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -93,8 +89,7 @@ void MainWindow::on_pushButton_G1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[7])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -102,7 +97,7 @@ void MainWindow::on_pushButton_GS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[8])));
-    player->setVolume(50);
+    player->setVolume(volume);
   //player->setPlaybackRate(500);
     player->play();
 }
@@ -111,8 +106,7 @@ void MainWindow::on_pushButton_A1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[9])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -120,8 +114,7 @@ void MainWindow::on_pushButton_AS1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[10])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -129,8 +122,7 @@ void MainWindow::on_pushButton_B1_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[11])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -138,8 +130,7 @@ void MainWindow::on_pushButton_C2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[12])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -147,8 +138,7 @@ void MainWindow::on_pushButton_CS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[13])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -156,8 +146,7 @@ void MainWindow::on_pushButton_D2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[14])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -165,8 +154,7 @@ void MainWindow::on_pushButton_DS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[15])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -174,8 +162,7 @@ void MainWindow::on_pushButton_E2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[16])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -183,8 +170,7 @@ void MainWindow::on_pushButton_F2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[17])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -192,8 +178,7 @@ void MainWindow::on_pushButton_FS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[18])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -201,8 +186,7 @@ void MainWindow::on_pushButton_G2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[19])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -210,8 +194,7 @@ void MainWindow::on_pushButton_GS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[20])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -219,8 +202,7 @@ void MainWindow::on_pushButton_A2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[21])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -228,8 +210,7 @@ void MainWindow::on_pushButton_AS2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[22])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -237,8 +218,7 @@ void MainWindow::on_pushButton_B2_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[23])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -246,8 +226,7 @@ void MainWindow::on_pushButton_C3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[24])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -255,8 +234,7 @@ void MainWindow::on_pushButton_CS3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[25])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -264,8 +242,7 @@ void MainWindow::on_pushButton_D3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[26])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -273,8 +250,7 @@ void MainWindow::on_pushButton_DS3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[27])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -282,8 +258,7 @@ void MainWindow::on_pushButton_E3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[28])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -291,8 +266,7 @@ void MainWindow::on_pushButton_F3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[29])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -300,8 +274,7 @@ void MainWindow::on_pushButton_FS3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[30])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -309,8 +282,7 @@ void MainWindow::on_pushButton_G3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[31])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -318,8 +290,7 @@ void MainWindow::on_pushButton_GS3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[32])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -327,8 +298,7 @@ void MainWindow::on_pushButton_A3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[33])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -336,8 +306,7 @@ void MainWindow::on_pushButton_AS3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[34])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -345,8 +314,7 @@ void MainWindow::on_pushButton_B3_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[35])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -354,8 +322,7 @@ void MainWindow::on_pushButton_C4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[36])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -363,8 +330,7 @@ void MainWindow::on_pushButton_CS4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[37])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -372,8 +338,7 @@ void MainWindow::on_pushButton_D4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[38])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -381,8 +346,7 @@ void MainWindow::on_pushButton_DS4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[39])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -390,8 +354,7 @@ void MainWindow::on_pushButton_E4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[40])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -399,8 +362,7 @@ void MainWindow::on_pushButton_F4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[41])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -408,8 +370,7 @@ void MainWindow::on_pushButton_FS4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[42])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -417,8 +378,7 @@ void MainWindow::on_pushButton_G4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[43])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -426,8 +386,7 @@ void MainWindow::on_pushButton_GS4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[44])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -435,8 +394,7 @@ void MainWindow::on_pushButton_A4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[45])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -444,8 +402,7 @@ void MainWindow::on_pushButton_AS4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[46])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -453,8 +410,7 @@ void MainWindow::on_pushButton_B4_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[47])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -462,8 +418,7 @@ void MainWindow::on_pushButton_C5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[48])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -471,8 +426,7 @@ void MainWindow::on_pushButton_CS5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[49])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -480,8 +434,7 @@ void MainWindow::on_pushButton_D5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[50])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -489,8 +442,7 @@ void MainWindow::on_pushButton_DS5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[51])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -498,8 +450,7 @@ void MainWindow::on_pushButton_E5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[52])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -507,8 +458,7 @@ void MainWindow::on_pushButton_F5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[53])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -516,8 +466,7 @@ void MainWindow::on_pushButton_FS5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[54])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -525,8 +474,7 @@ void MainWindow::on_pushButton_G5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[55])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -534,8 +482,7 @@ void MainWindow::on_pushButton_GS5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[56])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -543,8 +490,7 @@ void MainWindow::on_pushButton_A5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[57])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -552,8 +498,7 @@ void MainWindow::on_pushButton_AS5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[58])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -561,8 +506,7 @@ void MainWindow::on_pushButton_B5_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[59])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -570,8 +514,7 @@ void MainWindow::on_pushButton_C6_pressed()
 {
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[60])));
-    player->setVolume(50);
-  //player->setPlaybackRate(500);
+    player->setVolume(volume);
     player->play();
 }
 
@@ -581,60 +524,57 @@ void MainWindow::on_pushButton_C6_pressed()
 
 
 void MainWindow::keyPressEvent(QKeyEvent* event){
-   // QKeyEvent* event = new QKeyEvent;
     switch (event->key()) {
 
-    case 0x31: // 1
-        if (event->modifiers())
-            MainWindow::on_pushButton_CS1_pressed();
-        else
-            MainWindow::on_pushButton_C1_pressed();
-        break;
 
+    case 0x31: // 1    
+        MainWindow::on_pushButton_C1_pressed();
+        break;
+    case 0x21: // !
+        MainWindow::on_pushButton_CS1_pressed();
+        break;
     case 0x32: // 2
-        if (event->modifiers())
-            MainWindow::on_pushButton_DS1_pressed();
-        else
-            MainWindow::on_pushButton_D1_pressed();
+        MainWindow::on_pushButton_D1_pressed();
         break;
-
+    case 0x40: // @
+        MainWindow::on_pushButton_DS1_pressed();
+        break;
     case 0x33: // 3
         MainWindow::on_pushButton_E1_pressed();
         break;
-
     case 0x34: // 4
-        if (event->modifiers())
-            MainWindow::on_pushButton_FS1_pressed();
-        else
-            MainWindow::on_pushButton_F1_pressed();
+        MainWindow::on_pushButton_F1_pressed();
+        break;
+    case 0x24: // $
+        MainWindow::on_pushButton_FS1_pressed();
         break;
     case 0x35: // 5
-        if (event->modifiers())
-            MainWindow::on_pushButton_GS1_pressed();
-        else
-            MainWindow::on_pushButton_G1_pressed();
+        MainWindow::on_pushButton_G1_pressed();
+        break;
+    case 0x205: // %
+        MainWindow::on_pushButton_GS1_pressed();
         break;
     case 0x36: // 6
-        if (event->modifiers())
-            MainWindow::on_pushButton_AS1_pressed();
-        else
-            MainWindow::on_pushButton_A1_pressed();
+        MainWindow::on_pushButton_A1_pressed();
+        break;
+    case 0x5E: // ^
+        MainWindow::on_pushButton_AS1_pressed();
         break;
     case 0x37: // 7
-            MainWindow::on_pushButton_B1_pressed();;
+        MainWindow::on_pushButton_B1_pressed();;
         break;
     case 0x38: // 8
-        if (event->modifiers())
-            MainWindow::on_pushButton_CS2_pressed();
-        else
-            MainWindow::on_pushButton_C2_pressed();
+        MainWindow::on_pushButton_C2_pressed();
+        break;
+    case 0x2A: // *
+        MainWindow::on_pushButton_CS2_pressed();
         break;
     case 0x39: // 9
-        if (event->modifiers())
-            MainWindow::on_pushButton_DS2_pressed();
-        else
-            MainWindow::on_pushButton_D2_pressed();
-    break;
+        MainWindow::on_pushButton_D2_pressed();
+        break;
+    case 0x28: // (
+        MainWindow::on_pushButton_DS2_pressed();
+        break;
     case 0x30: // 0
         MainWindow::on_pushButton_E2_pressed();
         break;
@@ -787,12 +727,24 @@ void MainWindow::on_pushButton_Vibes_clicked()
     samples->setSound(2);
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_Rhodes_clicked()
 {
     samples->setSound(5);
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_Clavichord_clicked()
 {
     samples->setSound(6);
 }
+
+void MainWindow::on_pushButton_Guitar_pressed()
+{
+    samples->setSound(7);
+}
+
+void MainWindow::on_dial_valueChanged(int value)
+{
+    volume = value;
+}
+
+

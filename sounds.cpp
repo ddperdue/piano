@@ -1,4 +1,5 @@
 #include "sounds.h"
+#include "mainwindow.h"
 
 Sounds::Sounds()
 {
@@ -328,6 +329,68 @@ void Sounds::setSound (int sound){
         Sounds::files[59] = "/Samples/Clavichord/D6C-DB s-M4 -20 B4.mp3";
         Sounds::files[60] = "/Samples/Clavichord/D6C-DB s-M4 -20 C5.mp3";
         break;
+    case 7:
+        Sounds::files[0] = "/Samples/Guitar/Sound L5-9.mp3";
+        Sounds::files[1] = "/Samples/Guitar/Sound L5-10.mp3";
+        Sounds::files[2] = "/Samples/Guitar/Sound L5-11.mp3";
+        Sounds::files[3] = "/Samples/Guitar/Sound L5-12.mp3";
+        Sounds::files[4] = "/Samples/Guitar/Sound L5-13.mp3";
+        Sounds::files[5] = "/Samples/Guitar/Sound L5-14.mp3";
+        Sounds::files[6] = "/Samples/Guitar/Sound L5-15.mp3";
+        Sounds::files[7] = "/Samples/Guitar/Sound L5-16.mp3";
+        Sounds::files[8] = "/Samples/Guitar/Sound L5-17.mp3";
+        Sounds::files[9] = "/Samples/Guitar/Sound L5-18.mp3";
+        Sounds::files[10] = "/Samples/Guitar/Sound L5-19.mp3";
+        Sounds::files[11] = "/Samples/Guitar/Sound L5-20.mp3";
+        Sounds::files[12] = "/Samples/Guitar/Sound L5-21.mp3";
+        Sounds::files[13] = "/Samples/Guitar/Sound L5-22.mp3";
+        Sounds::files[14] = "/Samples/Guitar/Sound L5-23.mp3";
+        Sounds::files[15] = "/Samples/Guitar/Sound L5-24.mp3";
+        Sounds::files[16] = "/Samples/Guitar/Sound L5-1.mp3";
+        Sounds::files[17] = "/Samples/Guitar/Sound L5-2.mp3";
+        Sounds::files[18] = "/Samples/Guitar/Sound L5-3.mp3";
+        Sounds::files[19] = "/Samples/Guitar/Sound L5-4.mp3";
+        Sounds::files[20] = "/Samples/Guitar/Sound L5-5.mp3";
+        Sounds::files[21] = "/Samples/Guitar/Sound L5-6.mp3";
+        Sounds::files[22] = "/Samples/Guitar/Sound L5-7.mp3";
+        Sounds::files[23] = "/Samples/Guitar/Sound L5-8.mp3";
+        Sounds::files[24] = "/Samples/Guitar/Sound L5-9.mp3";
+        Sounds::files[25] = "/Samples/Guitar/Sound L5-10.mp3";
+        Sounds::files[26] = "/Samples/Guitar/Sound L5-11.mp3";
+        Sounds::files[27] = "/Samples/Guitar/Sound L5-12.mp3";
+        Sounds::files[28] = "/Samples/Guitar/Sound L5-13.mp3";
+        Sounds::files[29] = "/Samples/Guitar/Sound L5-14.mp3";
+        Sounds::files[30] = "/Samples/Guitar/Sound L5-15.mp3";
+        Sounds::files[31] = "/Samples/Guitar/Sound L5-16.mp3";
+        Sounds::files[32] = "/Samples/Guitar/Sound L5-17.mp3";
+        Sounds::files[33] = "/Samples/Guitar/Sound L5-18.mp3";
+        Sounds::files[34] = "/Samples/Guitar/Sound L5-19.mp3";
+        Sounds::files[35] = "/Samples/Guitar/Sound L5-20.mp3";
+        Sounds::files[36] = "/Samples/Guitar/Sound L5-21.mp3";
+        Sounds::files[37] = "/Samples/Guitar/Sound L5-22.mp3";
+        Sounds::files[38] = "/Samples/Guitar/Sound L5-23.mp3";
+        Sounds::files[39] = "/Samples/Guitar/Sound L5-24.mp3";
+        Sounds::files[40] = "/Samples/Guitar/Sound L5-25.mp3";
+        Sounds::files[41] = "/Samples/Guitar/Sound L5-26.mp3";
+        Sounds::files[42] = "/Samples/Guitar/Sound L5-27.mp3";
+        Sounds::files[43] = "/Samples/Guitar/Sound L5-28.mp3";
+        Sounds::files[44] = "/Samples/Guitar/Sound L5-29.mp3";
+        Sounds::files[45] = "/Samples/Guitar/Sound L5-30.mp3";
+        Sounds::files[46] = "/Samples/Guitar/Sound L5-31.mp3";
+        Sounds::files[47] = "/Samples/Guitar/Sound L5-32.mp3";
+        Sounds::files[48] = "/Samples/Guitar/Sound L5-33.mp3";
+        Sounds::files[49] = "/Samples/Guitar/Sound L5-34.mp3";
+        Sounds::files[50] = "/Samples/Guitar/Sound L5-35.mp3";
+        Sounds::files[51] = "/Samples/Guitar/Sound L5-36.mp3";
+        Sounds::files[52] = "/Samples/Guitar/Sound L5-37.mp3";
+        Sounds::files[53] = "/Samples/Guitar/Sound L5-38.mp3";
+        Sounds::files[54] = "/Samples/Guitar/Sound L5-39.mp3";
+        Sounds::files[55] = "/Samples/Guitar/Sound L5-40.mp3";
+        Sounds::files[56] = "/Samples/Guitar/Sound L5-41.mp3";
+        Sounds::files[57] = "/Samples/Guitar/Sound L5-42.mp3";
+        Sounds::files[58] = "/Samples/Guitar/Sound L5-43.mp3";
+        Sounds::files[59] = "/Samples/Guitar/Sound L5-44.mp3";
+        Sounds::files[60] = "/Samples/Guitar/Sound 46 L3.mp3";
     default:
         break;
     }

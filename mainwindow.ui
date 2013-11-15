@@ -824,7 +824,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>150</y>
+      <y>160</y>
       <width>114</width>
       <height>32</height>
      </rect>
@@ -833,11 +833,11 @@
      <string>Vibes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_Rhodes">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>110</y>
+      <y>130</y>
       <width>114</width>
       <height>32</height>
      </rect>
@@ -846,7 +846,46 @@
      <string>Rhodes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_Clavichord">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clavichord</string>
+    </property>
+   </widget>
+   <widget class="QDial" name="dial">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>20</y>
+      <width>50</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>80</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Volume</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Guitar">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -856,7 +895,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Clavichord</string>
+     <string>Guitar</string>
     </property>
    </widget>
    <zorder>pushButton_E3</zorder>
@@ -922,8 +961,11 @@
    <zorder>pushButton_GS5</zorder>
    <zorder>pushButton_Wurlitzer</zorder>
    <zorder>pushButton_Vibes</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_Rhodes</zorder>
+   <zorder>pushButton_Clavichord</zorder>
+   <zorder>dial</zorder>
+   <zorder>label</zorder>
+   <zorder>pushButton_Guitar</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

@@ -156,14 +156,20 @@ private slots:
 
     void on_pushButton_Vibes_clicked();
 
-    void on_pushButton_clicked();
+    void on_pushButton_Rhodes_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_Clavichord_clicked();
+
+    void on_dial_valueChanged(int value);
+
+    void on_pushButton_Guitar_pressed();
 
 private:
     Ui::MainWindow *ui;
 
     QString file;
+
+    int volume;
 };
 
 #endif // MAINWINDOW_H
