@@ -19,6 +19,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     samples = new Sounds;
 
+    //func[0] = MainWindow::on_pushButton_C1_pressed;
+
+    on_pushButton_C6_pressed();
+    on_pushButton_C5_pressed();
+    on_pushButton_C3_pressed();
+    on_pushButton_C4_pressed();
 }
 
 MainWindow::~MainWindow()
@@ -742,9 +748,15 @@ void MainWindow::on_pushButton_Guitar_pressed()
     samples->setSound(7);
 }
 
+void MainWindow::on_pushButton_Glockenspiel_pressed()
+{
+    samples->setSound(8);
+}
+
+
+
 void MainWindow::on_dial_valueChanged(int value)
 {
     volume = value;
 }
-
 

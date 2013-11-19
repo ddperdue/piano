@@ -18,17 +18,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private:
-    Sounds* samples;
 
 private slots:
 
-
-
-
     void keyPressEvent(QKeyEvent *event);
-
-
 
     void on_pushButton_C1_pressed();
 
@@ -160,14 +153,20 @@ private slots:
 
     void on_pushButton_Clavichord_clicked();
 
+    void on_pushButton_Guitar_pressed();
+
+    void on_pushButton_Glockenspiel_pressed();
+
     void on_dial_valueChanged(int value);
 
-    void on_pushButton_Guitar_pressed();
 
 private:
     Ui::MainWindow *ui;
 
-    QString file;
+   // QString file;
+    Sounds* samples;
+
+    void (*func[2])();
 
     int volume;
 };
