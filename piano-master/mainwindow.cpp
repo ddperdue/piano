@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     volume = 50;
     speed = 0;
     samples = new Sounds;
-    ui->horizontalSlider->setRange(speed, 600);
+    ui->horizontalSlider->setRange(0, 600);
 
     //Letter = new QKeyEvent;
     //func[0] = MainWindow::on_pushButton_C1_pressed;
