@@ -20,8 +20,11 @@ MainWindow::MainWindow(QWidget *parent) :
     speed = 0;
     samples = new Sounds;
     ui->horizontalSlider->setRange(0, 600);
+<<<<<<< HEAD
 
     //ui->webView->load(QUrl("http://maps.google.com"));
+=======
+>>>>>>> f5f4b2bb889d5432da0ee5de9f67a4d244d4a6ba
 
     //Letter = new QKeyEvent;
     //func[0] = MainWindow::on_pushButton_C1_pressed;
