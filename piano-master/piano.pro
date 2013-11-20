@@ -16,7 +16,8 @@ RESOURCES =
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    sounds.cpp
+    sounds.cpp \
+    textbox.cpp
 
 HEADERS  += mainwindow.h \
     sounds.h
