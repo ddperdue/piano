@@ -4,11 +4,20 @@
 #include <QMainWindow>
 #include "sounds.h"
 //#include <QtMultimedia/QMediaPlayer>
+#include <QThread>
 
 
 namespace Ui {
 class MainWindow;
 }
+
+class Sleeper : public QThread
+{
+public:
+    static void msleep (unsigned long msecs) {QThread::msleep(msecs);}
+
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -17,7 +26,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
 
 private slots:
 
@@ -158,7 +166,23 @@ private slots:
     void on_pushButton_Glockenspiel_pressed();
 
     void on_dial_valueChanged(int value);
+    
+    void on_pushButton_clicked();
 
+    void on_horizontalSlider_valueChanged(int value);
+/*
+    void on_pushButton_2_clicked();
+
+    void on_webView_loadFinished(bool arg1);
+
+    void on_webView_loadStarted();
+
+    void on_webView_loadProgress(int progress);
+
+    void on_webView_linkClicked(const QUrl &arg1);
+
+    void on_webView_urlChanged(const QUrl &arg1);
+*/
 
 private:
     Ui::MainWindow *ui;
@@ -169,6 +193,7 @@ private:
     void (*func[2])();
 
     int volume;
+    int speed;
 };
 
 #endif // MAINWINDOW_H

@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "sounds.h"
-//#include <QtMultimedia/QAudioOutput>
 #include <QtMultimedia/QMediaPlayer>
 #include <QEvent>
 #include <QKeyEvent>
@@ -16,9 +15,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     volume = 50;
-
+    speed = 0;
     samples = new Sounds;
+    ui->horizontalSlider->setRange(0, 600);
+<<<<<<< HEAD
 
+    //ui->webView->load(QUrl("http://maps.google.com"));
+=======
+>>>>>>> f5f4b2bb889d5432da0ee5de9f67a4d244d4a6ba
+
+    //Letter = new QKeyEvent;
     //func[0] = MainWindow::on_pushButton_C1_pressed;
 
     on_pushButton_C6_pressed();
@@ -39,8 +45,9 @@ void MainWindow::on_pushButton_C1_pressed()
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[0])));
     player->setVolume(volume);
     player->play();
-    std::cout << player->PlayingState;
 
+    Sleeper::msleep(15000);
+    delete(player);
 }
 
 void MainWindow::on_pushButton_CS1_pressed()
@@ -752,8 +759,6 @@ void MainWindow::on_pushButton_Glockenspiel_pressed()
 {
     samples->setSound(8);
 }
-
-
 
 void MainWindow::on_dial_valueChanged(int value)
 {
