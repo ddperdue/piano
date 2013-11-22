@@ -12,7 +12,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = piano
 TEMPLATE = app
 
-RESOURCES =
+RESOURCES = \
+    background.qrc
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -20,7 +21,8 @@ SOURCES += main.cpp\
     textbox.cpp \
     keyEvents.cpp \
     player.cpp \
-    newwindow.cpp
+    newwindow.cpp \
+    colors.cpp
 
 HEADERS  += mainwindow.h \
     sounds.h \

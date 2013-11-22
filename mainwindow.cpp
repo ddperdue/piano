@@ -9,11 +9,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    QPixmap pix(":/darkerWoodGrain.png");
+    ui->label_3->setPixmap(pix);
+
     volume = 50;
     speed = 0;
     samples = new Sounds;
     musicSheet = new NewWindow;
     ui->horizontalSlider->setRange(0, 600);
+
 
     on_pushButton_C6_pressed();
     on_pushButton_C5_pressed();
@@ -67,7 +71,9 @@ void MainWindow::on_dial_valueChanged(int value)
     volume = value;
 }
 
-void MainWindow::on_pushButton_2_clicked()
+
+
+void MainWindow::on_pushButton_musicSheets_clicked()
 {
     musicSheet->show();
 

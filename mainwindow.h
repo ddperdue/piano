@@ -185,7 +185,20 @@ private slots:
     void on_webView_urlChanged(const QUrl &arg1);
 */
 
+
+    void on_pushButton_musicSheets_clicked();
+
     void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_7_clicked();
 
 private:
     Ui::MainWindow *ui;
