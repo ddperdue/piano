@@ -3,8 +3,10 @@
 
 #include <QMainWindow>
 #include "sounds.h"
-//#include <QtMultimedia/QMediaPlayer>
+#include "newwindow.h"
 #include <QThread>
+#include <QMediaPlayer>
+//#include <QtTest/QTest>
 
 
 namespace Ui {
@@ -14,10 +16,8 @@ class MainWindow;
 class Sleeper : public QThread
 {
 public:
-    static void msleep (unsigned long msecs) {QThread::msleep(msecs);}
-
+   static void msleep(unsigned long msecs){QThread::msleep(msecs);}
 };
-
 
 class MainWindow : public QMainWindow
 {
@@ -28,6 +28,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void deletePlayer(QMediaPlayer* player);
 
     void keyPressEvent(QKeyEvent *event);
 
@@ -166,7 +167,7 @@ private slots:
     void on_pushButton_Glockenspiel_pressed();
 
     void on_dial_valueChanged(int value);
-    
+
     void on_pushButton_clicked();
 
     void on_horizontalSlider_valueChanged(int value);
@@ -184,15 +185,17 @@ private slots:
     void on_webView_urlChanged(const QUrl &arg1);
 */
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 
-   // QString file;
     Sounds* samples;
 
-    void (*func[2])();
+    NewWindow* musicSheet;
 
     int volume;
+
     int speed;
 };
 

@@ -16,11 +16,17 @@ RESOURCES =
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    sounds.cpp
+    sounds.cpp \
+    textbox.cpp \
+    keyEvents.cpp \
+    player.cpp \
+    newwindow.cpp
 
 HEADERS  += mainwindow.h \
-    sounds.h
+    sounds.h \
+    newwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    newwindow.ui
 
 RESOURCES +=

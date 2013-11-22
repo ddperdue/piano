@@ -491,7 +491,7 @@ void Sounds::setSound (int sound){
         Sounds::files[32] = "/Samples/Glockenspiel/Angel_A2.mp3";
         Sounds::files[33] = "/Samples/Glockenspiel/Angel_A#2.mp3";
         Sounds::files[34] = "/Samples/Glockenspiel/Angel_B2.mp3";
-        Sounds::files[35] = "/Samples/Glockenspiel/Angel_C3.mp3";
+        Sounds::files[35] = "/Samples/Drums/YMkit-Kick-78.mp3";
         Sounds::files[36] = "/Samples/Glockenspiel/Angel_C#3.mp3";
         Sounds::files[37] = "/Samples/Glockenspiel/Angel_D3.mp3";
         Sounds::files[38] = "/Samples/Glockenspiel/Angel_D#3.mp3";
@@ -503,7 +503,7 @@ void Sounds::setSound (int sound){
         Sounds::files[44] = "/Samples/Glockenspiel/Angel_A3.mp3";
         Sounds::files[45] = "/Samples/Drums/YMkit-Hihat-Tip00-24.mp3";
         Sounds::files[46] = "/Samples/Glockenspiel/Angel_B3.mp3";
-        Sounds::files[47] = "/Samples/Glockenspiel/Angel_C4.mp3";
+        Sounds::files[47] = "/Samples/Drums/YMkit-Ride-Mid-15.mp3";
         Sounds::files[48] = "/Samples/Glockenspiel/Angel_C#4.mp3";
         Sounds::files[49] = "/Samples/Glockenspiel/Angel_D4.mp3";
         Sounds::files[50] = "/Samples/Glockenspiel/Angel_D#4.mp3";

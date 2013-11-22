@@ -1,14 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "sounds.h"
-#include <QtMultimedia/QMediaPlayer>
-#include <QEvent>
-#include <QKeyEvent>
-#include <QDir>
-#include <QMediaPlayerControl>
-#include <iostream>
-
-
+//#include <QtMultimedia/QMediaPlayer>
+//#include <QEvent>
+//#include <QKeyEvent>
+//#include <QDir>
+//#include <QMediaPlayerControl>
+//#include <QtTest/QTest>
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -20,25 +18,30 @@ void MainWindow::on_pushButton_clicked()
     for (i=0;i<txt.size();i++){
         //qDebug() << txt[i] << endl;
 
-        Sleeper::msleep(speed);
+
 
         if(txt[i] == '1'){
             MainWindow::on_pushButton_C1_pressed();
+            Sleeper::msleep(speed);
         }
         if(txt[i] == '!'){
             MainWindow::on_pushButton_CS1_pressed();
         }
         if(txt[i] == '2'){
             MainWindow::on_pushButton_D1_pressed();
+            Sleeper::msleep(speed);
         }
         if(txt[i] == '@'){
             MainWindow::on_pushButton_DS1_pressed();
+            Sleeper::msleep(speed);
         }
         if(txt[i] == '3'){
             MainWindow::on_pushButton_E1_pressed();
+            Sleeper::msleep(speed);
         }
         if(txt[i] == '4'){
             MainWindow::on_pushButton_F1_pressed();
+            Sleeper::msleep(speed);
         }
         if(txt[i] == '$'){
             MainWindow::on_pushButton_FS1_pressed();
