@@ -70,4 +70,5 @@ void MainWindow::on_dial_valueChanged(int value)
 void MainWindow::on_pushButton_2_clicked()
 {
     musicSheet->show();
+
 }

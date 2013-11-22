@@ -2,7 +2,6 @@
 #include "newwindow.h"
 #include "ui_mainwindow.h"
 #include "sounds.h"
-#include <QEvent>
 #include <QKeyEvent>
 
 

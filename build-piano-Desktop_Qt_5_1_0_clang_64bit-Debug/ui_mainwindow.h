@@ -456,7 +456,7 @@ public:
         label_2->setGeometry(QRect(290, 160, 191, 21));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(610, 110, 131, 51));
+        pushButton_2->setGeometry(QRect(620, 140, 121, 31));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setGeometry(QRect(200, 380, 114, 32));
@@ -635,9 +635,9 @@ public:
         pushButton->setText(QApplication::translate("MainWindow", "Play", 0));
         label_2->setText(QApplication::translate("MainWindow", "Fast                                Slow   ", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "Music Sheets", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "PushButton", 0));
-        pushButton_4->setText(QApplication::translate("MainWindow", "PushButton", 0));
-        pushButton_5->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Record", 0));
+        pushButton_4->setText(QApplication::translate("MainWindow", "Stop", 0));
+        pushButton_5->setText(QApplication::translate("MainWindow", "Play", 0));
     } // retranslateUi
 
 };
