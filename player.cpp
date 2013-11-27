@@ -2,8 +2,8 @@
 #include "newwindow.h"
 #include "ui_mainwindow.h"
 #include "sounds.h"
-#include <QMediaPlayer>
-#include <QDir>
+//#include <QMediaPlayer>
+
 
 
 

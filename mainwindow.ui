@@ -1157,10 +1157,10 @@ background-color: qlineargradient(spread:pad, x1:0.664709, y1:0.705, x2:1, y2:0,
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>-30</x>
-      <y>-40</y>
-      <width>881</width>
-      <height>521</height>
+      <x>-570</x>
+      <y>-360</y>
+      <width>1851</width>
+      <height>1011</height>
      </rect>
     </property>
     <property name="text">
@@ -1248,6 +1248,45 @@ background-color: qlineargradient(spread:pad, x1:0.664709, y1:0.705, x2:1, y2:0,
      <string>Blue</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_Record">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>380</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Record</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Stop">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>380</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Play">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>380</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Play</string>
+    </property>
+   </widget>
    <zorder>label_3</zorder>
    <zorder>frame</zorder>
    <zorder>pushButton_E3</zorder>
@@ -1330,6 +1369,9 @@ background-color: qlineargradient(spread:pad, x1:0.664709, y1:0.705, x2:1, y2:0,
    <zorder>pushButton_5</zorder>
    <zorder>pushButton_6</zorder>
    <zorder>pushButton_7</zorder>
+   <zorder>pushButton_Record</zorder>
+   <zorder>pushButton_Stop</zorder>
+   <zorder>pushButton_Play</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

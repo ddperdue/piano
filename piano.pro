@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     keyEvents.cpp \
     player.cpp \
     newwindow.cpp \
-    colors.cpp
+    colors.cpp \
+    recording.cpp
 
 HEADERS  += mainwindow.h \
     sounds.h \

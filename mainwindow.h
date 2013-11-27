@@ -6,7 +6,12 @@
 #include "newwindow.h"
 #include <QThread>
 #include <QMediaPlayer>
-//#include <QtTest/QTest>
+#include <QAudioRecorder>
+#include <QAudioEncoderSettings>
+#include <QDir>
+#include <QStringList>
+#include <QTime>
+
 
 
 namespace Ui {
@@ -200,12 +205,28 @@ private slots:
 
     void on_pushButton_7_clicked();
 
+    void on_pushButton_Record_clicked();
+
+    void on_pushButton_Stop_clicked();
+
+    void on_pushButton_Play_clicked();
+
 private:
     Ui::MainWindow *ui;
 
     Sounds* samples;
 
     NewWindow* musicSheet;
+
+    QAudioRecorder* recorder;
+
+    QAudioEncoderSettings audioSettings;
+
+    QStringList inputs;
+
+    QString recording;
+
+    QMediaPlayer* playRecording;
 
     int volume;
 

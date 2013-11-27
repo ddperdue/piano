@@ -2,6 +2,8 @@
 #include "newwindow.h"
 #include "ui_mainwindow.h"
 #include "sounds.h"
+#include <iostream>
+#include <QString>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,6 +18,22 @@ MainWindow::MainWindow(QWidget *parent) :
     speed = 0;
     samples = new Sounds;
     musicSheet = new NewWindow;
+    recorder = new QAudioRecorder(this);
+    playRecording = new QMediaPlayer;
+
+    audioSettings.setCodec("audio/amr");
+    audioSettings.setQuality(QMultimedia::HighQuality);
+
+    inputs = recorder->audioInputs();
+
+    recorder->setEncodingSettings(audioSettings);
+    recorder->setAudioInput(inputs[1]);
+
+    foreach (QString input, inputs) {
+        std::cout << qPrintable(recorder->audioInputDescription(input)) << std::endl;
+        //std::cout << description;
+    }
+
     ui->horizontalSlider->setRange(0, 600);
 
 
@@ -78,3 +96,4 @@ void MainWindow::on_pushButton_musicSheets_clicked()
     musicSheet->show();
 
 }
+

@@ -114,6 +114,9 @@ public:
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
     QPushButton *pushButton_7;
+    QPushButton *pushButton_Record;
+    QPushButton *pushButton_Stop;
+    QPushButton *pushButton_Play;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -465,7 +468,7 @@ public:
         pushButton_musicSheets->setGeometry(QRect(600, 140, 171, 31));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(-30, -40, 881, 521));
+        label_3->setGeometry(QRect(-570, -360, 1851, 1011));
         label_3->setPixmap(QPixmap(QString::fromUtf8("../darkerWoodGrain.jpg")));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
@@ -485,6 +488,15 @@ public:
         pushButton_7 = new QPushButton(centralWidget);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
         pushButton_7->setGeometry(QRect(710, 110, 71, 32));
+        pushButton_Record = new QPushButton(centralWidget);
+        pushButton_Record->setObjectName(QStringLiteral("pushButton_Record"));
+        pushButton_Record->setGeometry(QRect(180, 380, 114, 32));
+        pushButton_Stop = new QPushButton(centralWidget);
+        pushButton_Stop->setObjectName(QStringLiteral("pushButton_Stop"));
+        pushButton_Stop->setGeometry(QRect(320, 380, 114, 32));
+        pushButton_Play = new QPushButton(centralWidget);
+        pushButton_Play->setObjectName(QStringLiteral("pushButton_Play"));
+        pushButton_Play->setGeometry(QRect(450, 380, 114, 32));
         MainWindow->setCentralWidget(centralWidget);
         label_3->raise();
         frame->raise();
@@ -568,6 +580,9 @@ public:
         pushButton_5->raise();
         pushButton_6->raise();
         pushButton_7->raise();
+        pushButton_Record->raise();
+        pushButton_Stop->raise();
+        pushButton_Play->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 781, 22));
@@ -665,6 +680,9 @@ public:
         pushButton_5->setText(QApplication::translate("MainWindow", "Yellow", 0));
         pushButton_6->setText(QApplication::translate("MainWindow", "Orange", 0));
         pushButton_7->setText(QApplication::translate("MainWindow", "Blue", 0));
+        pushButton_Record->setText(QApplication::translate("MainWindow", "Record", 0));
+        pushButton_Stop->setText(QApplication::translate("MainWindow", "Stop", 0));
+        pushButton_Play->setText(QApplication::translate("MainWindow", "Play", 0));
     } // retranslateUi
 
 };
