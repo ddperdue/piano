@@ -96,7 +96,7 @@ public:
     QPushButton *pushButton_Wurlitzer;
     QPushButton *pushButton_Vibes;
     QPushButton *pushButton_Rhodes;
-    QPushButton *pushButton_Clavichord;
+    QPushButton *pushButton_Piano;
     QDial *dial;
     QLabel *label;
     QPushButton *pushButton_Guitar;
@@ -424,9 +424,9 @@ public:
         pushButton_Rhodes = new QPushButton(centralWidget);
         pushButton_Rhodes->setObjectName(QStringLiteral("pushButton_Rhodes"));
         pushButton_Rhodes->setGeometry(QRect(30, 80, 114, 32));
-        pushButton_Clavichord = new QPushButton(centralWidget);
-        pushButton_Clavichord->setObjectName(QStringLiteral("pushButton_Clavichord"));
-        pushButton_Clavichord->setGeometry(QRect(140, 140, 114, 32));
+        pushButton_Piano = new QPushButton(centralWidget);
+        pushButton_Piano->setObjectName(QStringLiteral("pushButton_Piano"));
+        pushButton_Piano->setGeometry(QRect(140, 140, 114, 32));
         dial = new QDial(centralWidget);
         dial->setObjectName(QStringLiteral("dial"));
         dial->setGeometry(QRect(700, 0, 50, 64));
@@ -490,7 +490,7 @@ public:
         pushButton_7->setGeometry(QRect(710, 110, 71, 32));
         pushButton_Record = new QPushButton(centralWidget);
         pushButton_Record->setObjectName(QStringLiteral("pushButton_Record"));
-        pushButton_Record->setGeometry(QRect(180, 380, 114, 32));
+        pushButton_Record->setGeometry(QRect(190, 380, 114, 32));
         pushButton_Stop = new QPushButton(centralWidget);
         pushButton_Stop->setObjectName(QStringLiteral("pushButton_Stop"));
         pushButton_Stop->setGeometry(QRect(320, 380, 114, 32));
@@ -564,7 +564,7 @@ public:
         pushButton_Wurlitzer->raise();
         pushButton_Vibes->raise();
         pushButton_Rhodes->raise();
-        pushButton_Clavichord->raise();
+        pushButton_Piano->raise();
         dial->raise();
         label->raise();
         pushButton_Guitar->raise();
@@ -666,7 +666,7 @@ public:
         pushButton_Wurlitzer->setText(QApplication::translate("MainWindow", "Wurlitzer", 0));
         pushButton_Vibes->setText(QApplication::translate("MainWindow", "Vibes", 0));
         pushButton_Rhodes->setText(QApplication::translate("MainWindow", "Rhodes", 0));
-        pushButton_Clavichord->setText(QApplication::translate("MainWindow", "Clavichord", 0));
+        pushButton_Piano->setText(QApplication::translate("MainWindow", "Piano", 0));
         label->setText(QApplication::translate("MainWindow", "Volume", 0));
         pushButton_Guitar->setText(QApplication::translate("MainWindow", "Guitar", 0));
         pushButton_Glockenspiel->setText(QApplication::translate("MainWindow", "Glockenspiel", 0));

@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[89];
-    char stringdata[2157];
+    char stringdata[2152];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -100,24 +100,24 @@ QT_MOC_LITERAL(67, 1577, 24),
 QT_MOC_LITERAL(68, 1602, 24),
 QT_MOC_LITERAL(69, 1627, 31),
 QT_MOC_LITERAL(70, 1659, 27),
-QT_MOC_LITERAL(71, 1687, 28),
-QT_MOC_LITERAL(72, 1716, 32),
-QT_MOC_LITERAL(73, 1749, 28),
-QT_MOC_LITERAL(74, 1778, 34),
-QT_MOC_LITERAL(75, 1813, 20),
-QT_MOC_LITERAL(76, 1834, 5),
-QT_MOC_LITERAL(77, 1840, 21),
-QT_MOC_LITERAL(78, 1862, 32),
-QT_MOC_LITERAL(79, 1895, 33),
-QT_MOC_LITERAL(80, 1929, 23),
-QT_MOC_LITERAL(81, 1953, 23),
-QT_MOC_LITERAL(82, 1977, 23),
-QT_MOC_LITERAL(83, 2001, 23),
-QT_MOC_LITERAL(84, 2025, 23),
-QT_MOC_LITERAL(85, 2049, 23),
-QT_MOC_LITERAL(86, 2073, 28),
-QT_MOC_LITERAL(87, 2102, 26),
-QT_MOC_LITERAL(88, 2129, 26)
+QT_MOC_LITERAL(71, 1687, 27),
+QT_MOC_LITERAL(72, 1715, 28),
+QT_MOC_LITERAL(73, 1744, 28),
+QT_MOC_LITERAL(74, 1773, 34),
+QT_MOC_LITERAL(75, 1808, 20),
+QT_MOC_LITERAL(76, 1829, 5),
+QT_MOC_LITERAL(77, 1835, 21),
+QT_MOC_LITERAL(78, 1857, 32),
+QT_MOC_LITERAL(79, 1890, 33),
+QT_MOC_LITERAL(80, 1924, 23),
+QT_MOC_LITERAL(81, 1948, 23),
+QT_MOC_LITERAL(82, 1972, 23),
+QT_MOC_LITERAL(83, 1996, 23),
+QT_MOC_LITERAL(84, 2020, 23),
+QT_MOC_LITERAL(85, 2044, 23),
+QT_MOC_LITERAL(86, 2068, 28),
+QT_MOC_LITERAL(87, 2097, 26),
+QT_MOC_LITERAL(88, 2124, 26)
     },
     "MainWindow\0deletePlayer\0\0QMediaPlayer*\0"
     "player\0keyPressEvent\0QKeyEvent*\0event\0"
@@ -183,9 +183,9 @@ QT_MOC_LITERAL(88, 2129, 26)
     "on_pushButton_B5_pressed\0"
     "on_pushButton_C6_pressed\0"
     "on_pushButton_Wurlitzer_clicked\0"
+    "on_pushButton_Piano_clicked\0"
     "on_pushButton_Vibes_clicked\0"
     "on_pushButton_Rhodes_clicked\0"
-    "on_pushButton_Clavichord_clicked\0"
     "on_pushButton_Guitar_pressed\0"
     "on_pushButton_Glockenspiel_pressed\0"
     "on_dial_valueChanged\0value\0"
@@ -454,9 +454,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 61: _t->on_pushButton_B5_pressed(); break;
         case 62: _t->on_pushButton_C6_pressed(); break;
         case 63: _t->on_pushButton_Wurlitzer_clicked(); break;
-        case 64: _t->on_pushButton_Vibes_clicked(); break;
-        case 65: _t->on_pushButton_Rhodes_clicked(); break;
-        case 66: _t->on_pushButton_Clavichord_clicked(); break;
+        case 64: _t->on_pushButton_Piano_clicked(); break;
+        case 65: _t->on_pushButton_Vibes_clicked(); break;
+        case 66: _t->on_pushButton_Rhodes_clicked(); break;
         case 67: _t->on_pushButton_Guitar_pressed(); break;
         case 68: _t->on_pushButton_Glockenspiel_pressed(); break;
         case 69: _t->on_dial_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;

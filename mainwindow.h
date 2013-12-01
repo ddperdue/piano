@@ -161,11 +161,11 @@ private slots:
 
     void on_pushButton_Wurlitzer_clicked();
 
+    void on_pushButton_Piano_clicked();
+
     void on_pushButton_Vibes_clicked();
 
     void on_pushButton_Rhodes_clicked();
-
-    void on_pushButton_Clavichord_clicked();
 
     void on_pushButton_Guitar_pressed();
 
@@ -176,20 +176,6 @@ private slots:
     void on_pushButton_clicked();
 
     void on_horizontalSlider_valueChanged(int value);
-/*
-    void on_pushButton_2_clicked();
-
-    void on_webView_loadFinished(bool arg1);
-
-    void on_webView_loadStarted();
-
-    void on_webView_loadProgress(int progress);
-
-    void on_webView_linkClicked(const QUrl &arg1);
-
-    void on_webView_urlChanged(const QUrl &arg1);
-*/
-
 
     void on_pushButton_musicSheets_clicked();
 

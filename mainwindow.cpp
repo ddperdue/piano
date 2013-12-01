@@ -27,11 +27,15 @@ MainWindow::MainWindow(QWidget *parent) :
     inputs = recorder->audioInputs();
 
     recorder->setEncodingSettings(audioSettings);
-    recorder->setAudioInput(inputs[1]);
+    //recorder->audioInput() = "Built-In Input";
+    //recorder->setAudioInput(recorder->audioInput());
+
+
 
     foreach (QString input, inputs) {
         std::cout << qPrintable(recorder->audioInputDescription(input)) << std::endl;
         //std::cout << description;
+        recorder->setAudioInput(input);
     }
 
     ui->horizontalSlider->setRange(0, 600);
@@ -51,12 +55,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::deletePlayer(QMediaPlayer* player) {
 
-    delete(player);
+        delete(player);
 }
 
 void MainWindow::on_pushButton_Wurlitzer_clicked()
 {
     samples->setSound(1);
+}
+
+void MainWindow::on_pushButton_Piano_clicked()
+{
+    samples->setSound(4);
 }
 
 void MainWindow::on_pushButton_Vibes_clicked()
@@ -67,11 +76,6 @@ void MainWindow::on_pushButton_Vibes_clicked()
 void MainWindow::on_pushButton_Rhodes_clicked()
 {
     samples->setSound(5);
-}
-
-void MainWindow::on_pushButton_Clavichord_clicked()
-{
-    samples->setSound(6);
 }
 
 void MainWindow::on_pushButton_Guitar_pressed()
@@ -96,4 +100,6 @@ void MainWindow::on_pushButton_musicSheets_clicked()
     musicSheet->show();
 
 }
+
+
 

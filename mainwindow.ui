@@ -1000,7 +1000,7 @@ background-color: qlineargradient(spread:pad, x1:0.512, y1:0, x2:1, y2:0, stop:0
      <string>Rhodes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Clavichord">
+   <widget class="QPushButton" name="pushButton_Piano">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -1010,7 +1010,7 @@ background-color: qlineargradient(spread:pad, x1:0.512, y1:0, x2:1, y2:0, stop:0
      </rect>
     </property>
     <property name="text">
-     <string>Clavichord</string>
+     <string>Piano</string>
     </property>
    </widget>
    <widget class="QDial" name="dial">
@@ -1251,7 +1251,7 @@ background-color: qlineargradient(spread:pad, x1:0.664709, y1:0.705, x2:1, y2:0,
    <widget class="QPushButton" name="pushButton_Record">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>190</x>
       <y>380</y>
       <width>114</width>
       <height>32</height>
@@ -1353,7 +1353,7 @@ background-color: qlineargradient(spread:pad, x1:0.664709, y1:0.705, x2:1, y2:0,
    <zorder>pushButton_Wurlitzer</zorder>
    <zorder>pushButton_Vibes</zorder>
    <zorder>pushButton_Rhodes</zorder>
-   <zorder>pushButton_Clavichord</zorder>
+   <zorder>pushButton_Piano</zorder>
    <zorder>dial</zorder>
    <zorder>label</zorder>
    <zorder>pushButton_Guitar</zorder>

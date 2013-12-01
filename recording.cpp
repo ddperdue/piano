@@ -19,9 +19,6 @@ void MainWindow::on_pushButton_Play_clicked()
 {
     playRecording->setMedia(QUrl::fromLocalFile(recording));
     playRecording->setVolume(100);
-
     playRecording->play();
-
-
 }
 

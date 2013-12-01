@@ -9,7 +9,23 @@ NewWindow::NewWindow(QWidget *parent) :
     ui(new Ui::NewWindow)
 {
     ui->setupUi(this);
-    ui->textBrowser->setText("***The Godfather***"
+    ui->textBrowser->setText("***Some Of Für Elise***"
+                             "\nf D f D f a d s p - t u p a  - u O a s"
+                             "\nu f D f D f a d s p - t u p a  -  u s a p - a s d f - o g f d - i f d s"
+                             "\nu d s a - u f u f f x D f D f D f D f D f D f a d s p"
+                             "\nt u p a - u O a s - u f D f D f a d s p - t u p a - u s a p"
+
+
+                             "\n\n***Twinkle Twinkle Little Star***"
+                            "\ndd jj kk j hh GG ff d jj hh GG f jj hh GG f dd jj kk j hh GG ff d"
+
+                             "\n\n***Happy Birthday To You***"
+                             "\ns s d s g f"
+                             "\ns s d s h g"
+                             "\ns s l j g f d"
+                             "\nJ J j g h g"
+
+                             "\n\n***The Godfather***"
                              "\no-s-D-d-s-D-s-d-s-O-P-o"
                              "\no-s-D-d-s-D-s-d-s-o-I- i"
                              "\ni-O-a-d"
@@ -22,15 +38,6 @@ NewWindow::NewWindow(QWidget *parent) :
                             "\no-s-D-d-s-D-s-d-s-o-I-i"
                              "\ns-s-a-P-d-s-O-o"
                              "\nt-Y-P-O-o-P-O-O-o-o-r-t"
-
-                             "\n\n***Twinkle Twinkle Little Star***"
-                            "\ndd jj kk j hh GG ff d jj hh GG f jj hh GG f dd jj kk j hh GG ff d"
-
-                             "\n\n***Happy Birthday To You***"
-                             "\ns s d s g f"
-                             "\ns s d s h g"
-                             "\ns s l j g f d"
-                             "\nJ J j g h g"
 
                              "\n\n***A Whole New World***"
                              "\nu y i u t w"
@@ -67,11 +74,6 @@ NewWindow::NewWindow(QWidget *parent) :
                              "\nf d s d d f f s"
                              "\nf d s p o f d s p o f d s f"
 
-                             "\n\n***Some Of Für Elise***"
-                             "\nf D f D f a d s p - t u p a  - u O a s"
-                             "\nu f D f D f a d s p - t u p a  -  u s a p - a s d f - o g f d - i f d s"
-                             "\nu d s a - u f u f f x D f D f D f D f D f D f a d s p"
-                             "\nt u p a - u O a s - u f D f D f a d s p - t u p a - u s a p"
 
                              "\n\n***Yesterday***"
                              "\noii paSdfgf dd ddsPpoP pp oipoyi pp"

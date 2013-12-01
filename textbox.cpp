@@ -12,6 +12,7 @@ void MainWindow::on_pushButton_clicked()
 
         Sleeper::msleep(speed);
 
+
         if(txt[i] == '1'){
             MainWindow::on_pushButton_C1_pressed();
         }
