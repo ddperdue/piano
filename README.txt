@@ -60,8 +60,8 @@ CONTACT
 	If you have problems, questions, ideas or suggestions, please contact 	
 		- Dan Perdue      - ddperdue@gmail.com					
 		- Raghav Sharma   - rsharm7@uic.edu				
-		- Mohammad Joudeh -						
-		- Bilal Abu Zenah -						
+		- Mohammad Joudeh - mjoude5@uic.edu						
+		- Bilal Abu Zenah - babuze2@uic.edu						
 
  ===============================================================================
 |	The program can be reached through the following websites:		|

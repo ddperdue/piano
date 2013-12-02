@@ -595,22 +595,61 @@ private slots:
      */
     void on_dial_valueChanged(int value);
 
+   /*!
+    * \brief MainWindow::on_pushButton_clicked
+    *  -On click of play button, function allows users to play the text typed 
+    *   or pasted into the text box. First, the text is stored into a QString
+    *   and processed one character at a time to play the sound corresponding
+    *   to that specific charcter.
+    */
     void on_pushButton_clicked();
+   
+    /*!
+     * @brief MainWindow::on_horizontalSlider_valueChanged
+     * @param value
+     *      Function sets the speed at which the text that the user
+     *       enters into the text box to the value that the user selects 
+     *       by moving the horizontal slider below the text box.
+     */
 
     void on_horizontalSlider_valueChanged(int value);
 
     void on_pushButton_musicSheets_clicked();
-
+   
+    /*!
+     * \brief MainWindow::on_pushButton_2_clicked
+     *      Sets the background color of the piano to red
+     */
     void on_pushButton_2_clicked();
-
+   
+    /*!
+     * \brief MainWindow::on_pushButton_3_clicked
+     *      Sets the background color of the piano to black
+     */
     void on_pushButton_3_clicked();
 
+    /*!
+     * \brief MainWindow::on_pushButton_4_clicked
+     *      Sets the background color of the piano to green
+     */
     void on_pushButton_4_clicked();
 
+    /*!
+     * \brief MainWindow::on_pushButton_5_clicked
+     *      Sets the background color of the piano to yellow
+     */
     void on_pushButton_5_clicked();
 
+    /*!
+     * \brief MainWindow::on_pushButton_6_clicked
+     *      Sets the background color of the piano to orange
+     */
     void on_pushButton_6_clicked();
 
+    /*!
+     * \brief MainWindow::on_pushButton_7_clicked
+     *      Sets the background color of the piano to blue
+     */
     void on_pushButton_7_clicked();
 
     void on_pushButton_Record_clicked();
