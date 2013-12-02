@@ -33,7 +33,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event){
     case 0x35: // 5
         MainWindow::on_pushButton_G1_pressed();
         break;
-    case 0x205: // %
+    case 0x25: // %
         MainWindow::on_pushButton_GS1_pressed();
         break;
     case 0x36: // 6

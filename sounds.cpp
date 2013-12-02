@@ -10,7 +10,7 @@ Sounds::Sounds()
 void Sounds::setSound (int sound){
 
     switch(sound){
-     case 1: //wurlitzer
+     case 1: //Wurlitzer
         Sounds::files[0] = "/Samples/Wurlitzer/WEP sus m3 C1 -11.mp3";
         Sounds::files[1] = "/Samples/Wurlitzer/WEP sus m3 C#1 -11.mp3";
         Sounds::files[2] = "/Samples/Wurlitzer/WEP sus m3 D1 -11.mp3";
@@ -72,9 +72,8 @@ void Sounds::setSound (int sound){
         Sounds::files[58] = "/Samples/Wurlitzer/WEP sus m3 A#5 -11.mp3";
         Sounds::files[59] = "/Samples/Wurlitzer/WEP sus m3 B5 -11.mp3";
         Sounds::files[60] = "/Samples/Wurlitzer/WEP sus m3 C6 -11.mp3";
-
-
         break;
+
     case 2: // Vibes
         Sounds::files[0] = "/Samples/Vibes/C2 VIBES.mp3";
         Sounds::files[1] = "/Samples/Vibes/C#2 VIBES.mp3";
@@ -137,42 +136,9 @@ void Sounds::setSound (int sound){
         Sounds::files[58] = "/Samples/Vibes/A#3 VIBES.mp3";
         Sounds::files[59] = "/Samples/Vibes/B3 VIBES.mp3";
         Sounds::files[60] = "/Samples/Vibes/C4 VIBES.mp3";
-
         break;
 
-    case 3: // Harpsichord
-        Sounds::files[0] = "/Samples/Harpsichord/007_036R_wav.mp3";
-        Sounds::files[1] = "/Samples/Harpsichord/007_038R_wav.mp3";
-        Sounds::files[2] = "/Samples/Harpsichord/007_040R_wav.mp3";
-        Sounds::files[3] = "/Samples/Harpsichord/007_041R_wav.mp3";
-        Sounds::files[4] = "/Samples/Harpsichord/007_043R_wav.mp3";
-        Sounds::files[5] = "/Samples/Harpsichord/007_045R_wav.mp3";
-        Sounds::files[6] = "/Samples/Harpsichord/007_047R_wav.mp3";
-        Sounds::files[7] = "/Samples/Harpsichord/007_048R_wav.mp3";
-        Sounds::files[8] = "/Samples/Harpsichord/007_050R_wav.mp3";
-        Sounds::files[9] = "/Samples/Harpsichord/007_052R_wav.mp3";
-        Sounds::files[10] = "/Samples/Harpsichord/007_053R_wav.mp3";
-        Sounds::files[11] = "/Samples/Harpsichord/007_055R_wav.mp3";
-        Sounds::files[12] = "/Samples/Harpsichord/007_057R_wav.mp3";
-        Sounds::files[13] = "/Samples/Harpsichord/007_059R_wav.mp3";
-        Sounds::files[14] = "/Samples/Harpsichord/007_060R_wav.mp3";
-        Sounds::files[15] = "/Samples/Harpsichord/007_062R_wav.mp3";
-        Sounds::files[16] = "/Samples/Harpsichord/007_064R_wav.mp3";
-        Sounds::files[17] = "/Samples/Harpsichord/007_065R_wav.mp3";
-        Sounds::files[18] = "/Samples/Harpsichord/007_067R_wav.mp3";
-        Sounds::files[19] = "/Samples/Harpsichord/007_069R_wav.mp3";
-        Sounds::files[20] = "/Samples/Harpsichord/007_071R_wav.mp3";
-        Sounds::files[21] = "/Samples/Harpsichord/007_072R_wav.mp3";
-        Sounds::files[22] = "/Samples/Harpsichord/007_074R_wav.mp3";
-        Sounds::files[23] = "/Samples/Harpsichord/007_076R_wav.mp3";
-        Sounds::files[24] = "/Samples/Harpsichord/007_077R_wav.mp3";
-        Sounds::files[25] = "/Samples/Harpsichord/007_079R_wav.mp3";
-        Sounds::files[26] = "/Samples/Harpsichord/007_080R_wav.mp3";
-        Sounds::files[27] = "/Samples/Harpsichord/007_081R_wav.mp3";
-        Sounds::files[28] = "/Samples/Harpsichord/007_083R_wav.mp3";
-
-        break;
-    case 4: //Piano
+    case 3: //Piano
         Sounds::files[0] = "/Samples/Piano/emo_dn_16.mp3";
         Sounds::files[1] = "/Samples/Piano/emo_dn_17.mp3";
         Sounds::files[2] = "/Samples/Piano/emo_dn_18.mp3";
@@ -235,7 +201,8 @@ void Sounds::setSound (int sound){
         Sounds::files[59] = "/Samples/Piano/emo_dn_75.mp3";
         Sounds::files[60] = "/Samples/Piano/emo_dn_76.mp3";
         break;
-    case 5: // Rhodes
+
+    case 4: // Rhodes
         Sounds::files[0] = "/Samples/Rhodes/RSP73 sus m3 C2 -11.mp3";
         Sounds::files[1] = "/Samples/Rhodes/RSP73 sus m3 C#2 -11.mp3";
         Sounds::files[2] = "/Samples/Rhodes/RSP73 sus m3 D2 -11.mp3";
@@ -298,70 +265,8 @@ void Sounds::setSound (int sound){
         Sounds::files[59] = "/Samples/Rhodes/RSP73 sus m3 B6 -11.mp3";
         Sounds::files[60] = "/Samples/Rhodes/RSP73 sus m3 C7 -11.mp3";
         break;
-    case 6: // Clavichord
-        Sounds::files[0] = "/Samples/Clavichord/D6C-DB s-M2 -10 C1.mp3";
-        Sounds::files[1] = "/Samples/Clavichord/D6C-DB s-M4 -10 C#1.mp3";
-        Sounds::files[2] = "/Samples/Clavichord/D6C-DB s-M4 -10 D1.mp3";
-        Sounds::files[3] = "/Samples/Clavichord/D6C-DB s-M4 -10 D#1.mp3";
-        Sounds::files[4] = "/Samples/Clavichord/D6C-DB s-M4 -10 E1.mp3";
-        Sounds::files[5] = "/Samples/Clavichord/D6C-DB s-M4 -10 F0.mp3";
-        Sounds::files[6] = "/Samples/Clavichord/D6C-DB s-M4 -10 F#0.mp3";
-        Sounds::files[7] = "/Samples/Clavichord/D6C-DB s-M4 -10 G0.mp3";
-        Sounds::files[8] = "/Samples/Clavichord/D6C-DB s-M4 -10 G#0.mp3";
-        Sounds::files[9] = "/Samples/Clavichord/D6C-DB s-M4 -10 A1.mp3";
-        Sounds::files[10] = "/Samples/Clavichord/D6C-DB s-M4 -10 A#1.mp3";
-        Sounds::files[11] = "/Samples/Clavichord/D6C-DB s-M4 -10 B0.mp3";
-        Sounds::files[12] = "/Samples/Clavichord/D6C-DB s-M4 -10 C1.mp3";
-        Sounds::files[13] = "/Samples/Clavichord/D6C-DB s-M4 -10 C#1.mp3";
-        Sounds::files[14] = "/Samples/Clavichord/D6C-DB s-M4 -10 D1.mp3";
-        Sounds::files[15] = "/Samples/Clavichord/D6C-DB s-M4 -10 D#1.mp3";
-        Sounds::files[16] = "/Samples/Clavichord/D6C-DB s-M4 -10 E1.mp3";
-        Sounds::files[17] = "/Samples/Clavichord/D6C-DB s-M4 -10 F1.mp3";
-        Sounds::files[18] = "/Samples/Clavichord/D6C-DB s-M4 -10 F#1.mp3";
-        Sounds::files[19] = "/Samples/Clavichord/D6C-DB s-M4 -10 G1.mp3";
-        Sounds::files[20] = "/Samples/Clavichord/D6C-DB s-M4 -10 G#1.mp3";
-        Sounds::files[21] = "/Samples/Clavichord/D6C-DB s-M4 -10 A1.mp3";
-        Sounds::files[22] = "/Samples/Clavichord/D6C-DB s-M4 -10 A#1.mp3";
-        Sounds::files[23] = "/Samples/Clavichord/D6C-DB s-M4 -10 B1.mp3";
-        Sounds::files[24] = "/Samples/Clavichord/D6C-DB s-M4 -10 C2.mp3";
-        Sounds::files[25] = "/Samples/Clavichord/D6C-DB s-M4 -10 C#2.mp3";
-        Sounds::files[26] = "/Samples/Clavichord/D6C-DB s-M4 -10 D2.mp3";
-        Sounds::files[27] = "/Samples/Clavichord/D6C-DB s-M4 -10 D#2.mp3";
-        Sounds::files[28] = "/Samples/Clavichord/D6C-DB s-M4 -22 E2.mp3";
-        Sounds::files[29] = "/Samples/Clavichord/D6C-DB s-M4 -22 F2.mp3";
-        Sounds::files[30] = "/Samples/Clavichord/D6C-DB s-M4 -22 F#2.mp3";
-        Sounds::files[31] = "/Samples/Clavichord/D6C-DB s-M4 -22 G2.mp3";
-        Sounds::files[32] = "/Samples/Clavichord/D6C-DB s-M4 -22 G#2.mp3";
-        Sounds::files[33] = "/Samples/Clavichord/D6C-DB s-M4 -22 A2.mp3";
-        Sounds::files[34] = "/Samples/Clavichord/D6C-DB s-M4 -22 A#2.mp3";
-        Sounds::files[35] = "/Samples/Clavichord/D6C-DB s-M4 -22 B2.mp3";
-        Sounds::files[36] = "/Samples/Clavichord/D6C-DB s-M4 -22 C3.mp3";
-        Sounds::files[37] = "/Samples/Clavichord/D6C-DB s-M4 -22 C#3.mp3";
-        Sounds::files[38] = "/Samples/Clavichord/D6C-DB s-M4 -22 D3.mp3";
-        Sounds::files[39] = "/Samples/Clavichord/D6C-DB s-M4 -22 D#3.mp3";
-        Sounds::files[40] = "/Samples/Clavichord/D6C-DB s-M4 -22 E3.mp3";
-        Sounds::files[41] = "/Samples/Clavichord/D6C-DB s-M4 -22 F3.mp3";
-        Sounds::files[42] = "/Samples/Clavichord/D6C-DB s-M4 -22 F#3.mp3";
-        Sounds::files[43] = "/Samples/Clavichord/D6C-DB s-M4 -22 G3.mp3";
-        Sounds::files[44] = "/Samples/Clavichord/D6C-DB s-M4 -22 G#3.mp3";
-        Sounds::files[45] = "/Samples/Clavichord/D6C-DB s-M4 -22 A3.mp3";
-        Sounds::files[46] = "/Samples/Clavichord/D6C-DB s-M4 -22 A#3.mp3";
-        Sounds::files[47] = "/Samples/Clavichord/D6C-DB s-M4 -20 B3.mp3";
-        Sounds::files[48] = "/Samples/Clavichord/D6C-DB s-M4 -20 C4.mp3";
-        Sounds::files[49] = "/Samples/Clavichord/D6C-DB s-M4 -20 C#4.mp3";
-        Sounds::files[50] = "/Samples/Clavichord/D6C-DB s-M4 -20 D4.mp3";
-        Sounds::files[51] = "/Samples/Clavichord/D6C-DB s-M4 -20 D#4.mp3";
-        Sounds::files[52] = "/Samples/Clavichord/D6C-DB s-M4 -20 E4.mp3";
-        Sounds::files[53] = "/Samples/Clavichord/D6C-DB s-M4 -20 F4.mp3";
-        Sounds::files[54] = "/Samples/Clavichord/D6C-DB s-M4 -20 F#4.mp3";
-        Sounds::files[55] = "/Samples/Clavichord/D6C-DB s-M4 -20 G4.mp3";
-        Sounds::files[56] = "/Samples/Clavichord/D6C-DB s-M4 -20 G#4.mp3";
-        Sounds::files[57] = "/Samples/Clavichord/D6C-DB s-M4 -20 A4.mp3";
-        Sounds::files[58] = "/Samples/Clavichord/D6C-DB s-M4 -20 A#4.mp3";
-        Sounds::files[59] = "/Samples/Clavichord/D6C-DB s-M4 -20 B4.mp3";
-        Sounds::files[60] = "/Samples/Clavichord/D6C-DB s-M4 -20 C5.mp3";
-        break;
-    case 7: // Guitar
+
+    case 5: // Guitar
         Sounds::files[0] = "/Samples/Guitar/Sound L5-9.mp3";
         Sounds::files[1] = "/Samples/Guitar/Sound L5-10.mp3";
         Sounds::files[2] = "/Samples/Guitar/Sound L5-11.mp3";
@@ -424,7 +329,8 @@ void Sounds::setSound (int sound){
         Sounds::files[59] = "/Samples/Guitar/Sound L5-44.mp3";
         Sounds::files[60] = "/Samples/Guitar/Sound 46 L3.mp3";
         break;
-    case 8: // Glockenspiel
+
+    case 6: // Glockenspiel
         Sounds::files[0] = "/Samples/Glockenspiel/Angel_C3.mp3";
         Sounds::files[1] = "/Samples/Glockenspiel/Angel_C#3.mp3";
         Sounds::files[2] = "/Samples/Glockenspiel/Angel_D3.mp3";
@@ -487,6 +393,7 @@ void Sounds::setSound (int sound){
         Sounds::files[59] = "/Samples/Glockenspiel/Angel_Gliss_Down_02.mp3";
         Sounds::files[60] = "/Samples/Glockenspiel/Angel_Gliss_Up_03.mp3";
         break;
+
     default:
         break;
     }

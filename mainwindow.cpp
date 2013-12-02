@@ -28,8 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     recorder->setEncodingSettings(audioSettings);
     //recorder->audioInput() = "Built-In Input";
-    //recorder->setAudioInput(recorder->audioInput());
-
+    recorder->setAudioInput("Built-In Input");
 
 
     foreach (QString input, inputs) {
@@ -52,10 +51,20 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::endOfSample(QMediaPlayer::State state, QMediaPlayer* player) {
 
-void MainWindow::deletePlayer(QMediaPlayer* player) {
+    std::cout << "Hello" << std::endl;
 
-        delete(player);
+    if ( state == QMediaPlayer::StoppedState) {
+        deletePlayer(player);
+    }
+
+}
+
+void MainWindow::deletePlayer(QMediaPlayer *player) {
+
+    std::cout << "Hello" << std::endl;
+    delete(player);
 }
 
 void MainWindow::on_pushButton_Wurlitzer_clicked()
@@ -63,29 +72,30 @@ void MainWindow::on_pushButton_Wurlitzer_clicked()
     samples->setSound(1);
 }
 
-void MainWindow::on_pushButton_Piano_clicked()
-{
-    samples->setSound(4);
-}
-
 void MainWindow::on_pushButton_Vibes_clicked()
 {
     samples->setSound(2);
 }
 
+void MainWindow::on_pushButton_Piano_clicked()
+{
+    volume = volume + 50;
+    samples->setSound(3);
+}
+
 void MainWindow::on_pushButton_Rhodes_clicked()
 {
-    samples->setSound(5);
+    samples->setSound(4);
 }
 
 void MainWindow::on_pushButton_Guitar_pressed()
 {
-    samples->setSound(7);
+    samples->setSound(5);
 }
 
 void MainWindow::on_pushButton_Glockenspiel_pressed()
 {
-    samples->setSound(8);
+    samples->setSound(6);
 }
 
 void MainWindow::on_dial_valueChanged(int value)

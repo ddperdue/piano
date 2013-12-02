@@ -4,7 +4,6 @@
 void MainWindow::on_pushButton_Record_clicked()
 {
     recording = QDir::currentPath() + "/" + QTime::currentTime().toString() + ".amr";
-
     recorder->setOutputLocation(QUrl::fromLocalFile(recording));
     recorder->record();
 }

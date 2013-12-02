@@ -12,9 +12,8 @@ void MainWindow::on_pushButton_C1_pressed()
     QMediaPlayer* player = new QMediaPlayer;
     player->setMedia(QMediaContent(QUrl::fromLocalFile(QDir::currentPath() + samples->files[0])));
     player->setVolume(volume);
-    connect(player, SIGNAL(mediaStatusChanged(QMediaPlayer::MediaStatus)), this, SLOT(MainWindow::deletePlayer(player)));
+    connect(player, SIGNAL(QMediaPlayer::mediaStatusChanged(QMediaPlayer::EndOfMedia)), this, SLOT(deletePlayer(player)));
     player->play();
-
 }
 
 void MainWindow::on_pushButton_CS1_pressed()
