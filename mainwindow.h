@@ -46,9 +46,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void endOfSample(QMediaPlayer::State state, QMediaPlayer* player);
-
-    void deletePlayer(QMediaPlayer* player);
     /*!
      * \brief This slot captures any event from the user
      * on the keyboard and depending on the value of 'event'
@@ -638,6 +635,10 @@ private:
     QString recording;
 
     QMediaPlayer* playRecording;
+
+    QMediaPlayer* players;
+
+    int whichPlayer;
 
     int volume;
 

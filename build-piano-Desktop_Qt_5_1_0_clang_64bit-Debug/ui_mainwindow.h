@@ -472,13 +472,13 @@ public:
         label_3->setPixmap(QPixmap(QString::fromUtf8("../darkerWoodGrain.jpg")));
         pushButton_2 = new QPushButton(centralWidget);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(650, 90, 71, 32));
+        pushButton_2->setGeometry(QRect(650, 80, 71, 32));
         pushButton_3 = new QPushButton(centralWidget);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(590, 90, 71, 32));
+        pushButton_3->setGeometry(QRect(590, 80, 71, 32));
         pushButton_4 = new QPushButton(centralWidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(710, 90, 71, 32));
+        pushButton_4->setGeometry(QRect(710, 80, 71, 32));
         pushButton_5 = new QPushButton(centralWidget);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         pushButton_5->setGeometry(QRect(590, 110, 71, 32));

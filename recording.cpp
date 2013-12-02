@@ -3,7 +3,12 @@
 
 void MainWindow::on_pushButton_Record_clicked()
 {
-    recording = QDir::currentPath() + "/" + QTime::currentTime().toString() + ".amr";
+    QTime time = QTime::currentTime();
+
+    QString t = time.toString();
+    t.replace(':','.');
+
+    recording = QDir::currentPath() + "/" + t + ".amr";
     recorder->setOutputLocation(QUrl::fromLocalFile(recording));
     recorder->record();
 }

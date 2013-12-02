@@ -27,18 +27,19 @@ MainWindow::MainWindow(QWidget *parent) :
     inputs = recorder->audioInputs();
 
     recorder->setEncodingSettings(audioSettings);
-    //recorder->audioInput() = "Built-In Input";
     recorder->setAudioInput("Built-In Input");
 
+    players = new QMediaPlayer[20];
 
-    foreach (QString input, inputs) {
+    whichPlayer = 0;
+
+    /*foreach (QString input, inputs) {
         std::cout << qPrintable(recorder->audioInputDescription(input)) << std::endl;
         //std::cout << description;
         recorder->setAudioInput(input);
-    }
+    }*/
 
     ui->horizontalSlider->setRange(0, 600);
-
 
     on_pushButton_C6_pressed();
     on_pushButton_C5_pressed();
@@ -49,22 +50,6 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::endOfSample(QMediaPlayer::State state, QMediaPlayer* player) {
-
-    std::cout << "Hello" << std::endl;
-
-    if ( state == QMediaPlayer::StoppedState) {
-        deletePlayer(player);
-    }
-
-}
-
-void MainWindow::deletePlayer(QMediaPlayer *player) {
-
-    std::cout << "Hello" << std::endl;
-    delete(player);
 }
 
 void MainWindow::on_pushButton_Wurlitzer_clicked()
