@@ -4,6 +4,12 @@
 #include "mainwindow.h"
 #include <QTextBrowser>
 
+/*! \brief Music sheets NewWindow.
+ *creating a music sheet window type read-only
+ *when Music sheets is clicked it will open
+ *new window with different music sheets in it.
+ */
+
 NewWindow::NewWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::NewWindow)
