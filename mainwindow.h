@@ -652,10 +652,31 @@ private slots:
      */
     void on_pushButton_7_clicked();
 
+   /*!
+    * \brief When the Record button on the UI piano
+    * is clicked, this slot stores the current path of
+    * the program in a string. Then a QAudioRecorder object
+    * assigns the output location of a soon-to-be
+	 * new recording to this string's path.
+	 * Finally, the object starts recording what the 
+	 * user is actually playing.
+    */
     void on_pushButton_Record_clicked();
 
+   /*!
+    * \brief When the Stop button on the UI piano
+    * is clicked, this slot simply stops and completes
+	 * the recording.
+    */
     void on_pushButton_Stop_clicked();
 
+   /*!
+    * \brief When the Play button on the UI piano
+    * is clicked, this slot sets the QMediaPlayer settings
+    * to the path of where the recording file was stored.
+    * It sets its volume, and finally, it plays the audio
+	 * file of what the user previously recorded. 
+    */
     void on_pushButton_Play_clicked();
 
 private:
@@ -665,14 +686,35 @@ private:
 
     NewWindow* musicSheet;
 
+   /*!
+    * \brief Declares an object, recorder, to be of type
+    * QAudioRecorder. Inherits all of its methods, 
+	 * including record() and stop().
+    */
     QAudioRecorder* recorder;
 
+   /*!
+    * \brief Declares an object, audiosettings, to be of type
+    * QAudioEncoderSettings. The object specifies the audio
+	 * encoder settings and sets the desired properties.
+    */
     QAudioEncoderSettings audioSettings;
 
     QStringList inputs;
 
+   /*!
+    * \brief Declares an object, recording, to be of type
+	 * QString. The object stores the current path of where the 
+	 * recording will take place.
+    */
     QString recording;
 
+   /*!
+    * \brief Declares an object, playrecording, to be of type
+	 * QMediaPlayer. The object allows us to provide the settings
+	 * for the recorded file, set its volume, and actually
+	 * play the recording back.
+    */
     QMediaPlayer* playRecording;
 
     QMediaPlayer* players;
