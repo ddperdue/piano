@@ -3,6 +3,13 @@
 
 #include <QMainWindow>
 
+/*! \brief Music sheets NewWindow.
+ *Creates a new window when user clicks on
+ *the music sheets button. The new window
+ *displays various sample music sheets
+ *for the user to play. 
+ */
+
 namespace Ui {
 class NewWindow;
 }
