@@ -1,4 +1,4 @@
-INSERT TITLE HERE Version 1.0 12/01/2013
+VMT: Virtual Musical Typing Version 1.0 12/01/2013
 
 FEATURES
 --------
@@ -29,9 +29,9 @@ GENERAL USAGE NOTES
                'Samples' folder must be in the build folder before the program
                will properly run on either OS.
 	- RUNNING THE PROGRAM ON A MAC OS X:
-		The user must run the executable file in the build folder to run 
+		The user must run the app file in the build folder to run 
 		the program. This is due to the attachments of the sample files 	
-		which should now be in that folder
+		which should now be in that folder.
 	- RUNNING ON WINDOWS: 
 		To run on windows, compile the program as usual through QT and run 
 		the program by pressing the 'run' button.

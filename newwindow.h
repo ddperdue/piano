@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 
+/*! \brief Class for displaying Music Sheets feature
+ * in a new window opened when Music Sheet is clicked.
+ *  Inherits for QMainWindow from Qt
+ */
+
 namespace Ui {
 class NewWindow;
 }
