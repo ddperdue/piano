@@ -16,6 +16,7 @@ void MainWindow::on_pushButton_Record_clicked()
 void MainWindow::on_pushButton_Stop_clicked()
 {
     recorder->stop();
+    playRecording->stop();
 
 }
 

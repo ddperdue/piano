@@ -43,6 +43,7 @@ GENERAL USAGE NOTES
 		the sounds at different speeds. The horizontal slider does not operate
 		properly. This is due to the Sleeper class which does not transfer 
 		to a MAC OS X.
+       - Piano window must be the front window for program to recognize key strokes.
 
 FILES ATTACHED
 --------------	

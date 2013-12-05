@@ -652,25 +652,11 @@ private slots:
      */
     void on_pushButton_7_clicked();
 
-<<<<<<< HEAD
     /*!
-     * \brief When the Record button is pressed a .amr audio file
-     * with the current time as a name is created and set as the
-     * output location. Then using the computer's built in microphone
-     * a recording is made of the user's performance.
-     */
-    void on_pushButton_Record_clicked();
-
-    /*!
-     * \brief This button stops both any recording or playback currently in progress
+     * \brief This button stops both any recording or playback currently in progress.
      */
     void on_pushButton_Stop_clicked();
 
-    /*!
-     * \brief This button plays the audio file created by the most recent recording. The
-     * file name is stored in the QString recording.
-     */
-=======
    /*!
     * \brief When the Record button on the UI piano
     * is clicked, this slot stores the current path of
@@ -683,20 +669,12 @@ private slots:
     void on_pushButton_Record_clicked();
 
    /*!
-    * \brief When the Stop button on the UI piano
-    * is clicked, this slot simply stops and completes
-    * the recording.
-    */
-    void on_pushButton_Stop_clicked();
-
-   /*!
     * \brief When the Play button on the UI piano
     * is clicked, this slot sets the QMediaPlayer settings
     * to the path of where the recording file was stored.
     * It sets its volume, and finally, it plays the audio
     * file of what the user previously recorded. 
     */
->>>>>>> 50b6156f95a4acf7afac0c77e7a85d4d935385c4
     void on_pushButton_Play_clicked();
 
 private:
@@ -712,27 +690,7 @@ private:
      */
     NewWindow* musicSheet;
 
-<<<<<<< HEAD
     /*!
-     * \brief Object for recording audio.
-     */
-    QAudioRecorder* recorder;
-
-    /*!
-     * \brief Object for setting audio settings for recording feature.
-     */
-    QAudioEncoderSettings audioSettings;
-
-    /*!
-     * \brief Holds file name of currently recording/last recorded audio file
-     */
-    QString recording;
-
-    /*!
-     * \brief For playing recorded audio files.
-     */
-=======
-   /*!
     * \brief Declares an object, recorder, to be of type
     * QAudioRecorder. Inherits all of its methods, 
     * including record() and stop().
@@ -746,22 +704,19 @@ private:
     */
     QAudioEncoderSettings audioSettings;
 
-    QStringList inputs;
-
-   /*!
+    /*!
     * \brief Declares an object, recording, to be of type
     * QString. The object stores the current path of where the 
     * recording will take place.
     */
     QString recording;
 
-   /*!
+    /*!
     * \brief Declares an object, playrecording, to be of type
     * QMediaPlayer. The object allows us to provide the settings
     * for the recorded file, set its volume, and actually
     * play the recording back.
     */
->>>>>>> 50b6156f95a4acf7afac0c77e7a85d4d935385c4
     QMediaPlayer* playRecording;
 
     /*!

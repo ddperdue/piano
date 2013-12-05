@@ -24,20 +24,12 @@ MainWindow::MainWindow(QWidget *parent) :
     audioSettings.setCodec("audio/amr");
     audioSettings.setQuality(QMultimedia::HighQuality);
 
-    inputs = recorder->audioInputs();
-
     recorder->setEncodingSettings(audioSettings);
     recorder->setAudioInput("Built-In Input");
 
     players = new QMediaPlayer[20];
 
     whichPlayer = 0;
-
-    /*foreach (QString input, inputs) {
-        std::cout << qPrintable(recorder->audioInputDescription(input)) << std::endl;
-        //std::cout << description;
-        recorder->setAudioInput(input);
-    }*/
 
     ui->horizontalSlider->setRange(0, 600);
 

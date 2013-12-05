@@ -112,8 +112,8 @@ QT_MOC_LITERAL(79, 1938, 23),
 QT_MOC_LITERAL(80, 1962, 23),
 QT_MOC_LITERAL(81, 1986, 23),
 QT_MOC_LITERAL(82, 2010, 23),
-QT_MOC_LITERAL(83, 2034, 28),
-QT_MOC_LITERAL(84, 2063, 26),
+QT_MOC_LITERAL(83, 2034, 26),
+QT_MOC_LITERAL(84, 2061, 28),
 QT_MOC_LITERAL(85, 2090, 26)
     },
     "MainWindow\0keyPressEvent\0\0QKeyEvent*\0"
@@ -191,8 +191,8 @@ QT_MOC_LITERAL(85, 2090, 26)
     "on_pushButton_2_clicked\0on_pushButton_3_clicked\0"
     "on_pushButton_4_clicked\0on_pushButton_5_clicked\0"
     "on_pushButton_6_clicked\0on_pushButton_7_clicked\0"
-    "on_pushButton_Record_clicked\0"
     "on_pushButton_Stop_clicked\0"
+    "on_pushButton_Record_clicked\0"
     "on_pushButton_Play_clicked\0"
 };
 #undef QT_MOC_LITERAL
@@ -462,8 +462,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 75: _t->on_pushButton_5_clicked(); break;
         case 76: _t->on_pushButton_6_clicked(); break;
         case 77: _t->on_pushButton_7_clicked(); break;
-        case 78: _t->on_pushButton_Record_clicked(); break;
-        case 79: _t->on_pushButton_Stop_clicked(); break;
+        case 78: _t->on_pushButton_Stop_clicked(); break;
+        case 79: _t->on_pushButton_Record_clicked(); break;
         case 80: _t->on_pushButton_Play_clicked(); break;
         default: ;
         }

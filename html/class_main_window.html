@@ -23,9 +23,8 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">VMT: Virtual Musical Typing
-   &#160;<span id="projectnumber">Version 1.0</span>
    </div>
-   <div id="projectbrief">A virtual instrument for playing music with a qwerty keyboard.</div>
+   <div id="projectbrief">A virtual instrument for playing music with a qwerty keyboard</div>
   </td>
  </tr>
  </tbody>
@@ -346,14 +345,14 @@ Private Slots</h2></td></tr>
 <tr class="memitem:ae5139e21fe9bd453d697e0f58e1f2c24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae5139e21fe9bd453d697e0f58e1f2c24">on_pushButton_7_clicked</a> ()</td></tr>
 <tr class="memdesc:ae5139e21fe9bd453d697e0f58e1f2c24"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#ae5139e21fe9bd453d697e0f58e1f2c24" title="MainWindow::on_pushButton_7_clicked Sets the background color of the piano to blue. ">MainWindow::on_pushButton_7_clicked</a> Sets the background color of the piano to blue.  <a href="#ae5139e21fe9bd453d697e0f58e1f2c24">More...</a><br/></td></tr>
 <tr class="separator:ae5139e21fe9bd453d697e0f58e1f2c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1b0ee1f43f1a67475f94782398cb8df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac1b0ee1f43f1a67475f94782398cb8df">on_pushButton_Record_clicked</a> ()</td></tr>
-<tr class="memdesc:ac1b0ee1f43f1a67475f94782398cb8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the Record button is pressed a .amr audio file with the current time as a name is created and set as the output location. Then using the computer's built in microphone a recording is made of the user's performance.  <a href="#ac1b0ee1f43f1a67475f94782398cb8df">More...</a><br/></td></tr>
-<tr class="separator:ac1b0ee1f43f1a67475f94782398cb8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56d4e809beb6f802484a1b2ea7a65068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a56d4e809beb6f802484a1b2ea7a65068">on_pushButton_Stop_clicked</a> ()</td></tr>
 <tr class="memdesc:a56d4e809beb6f802484a1b2ea7a65068"><td class="mdescLeft">&#160;</td><td class="mdescRight">This button stops both any recording or playback currently in progress.  <a href="#a56d4e809beb6f802484a1b2ea7a65068">More...</a><br/></td></tr>
 <tr class="separator:a56d4e809beb6f802484a1b2ea7a65068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b0ee1f43f1a67475f94782398cb8df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac1b0ee1f43f1a67475f94782398cb8df">on_pushButton_Record_clicked</a> ()</td></tr>
+<tr class="memdesc:ac1b0ee1f43f1a67475f94782398cb8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the Record button on the UI piano is clicked, this slot stores the current path of the program in a string. Then a QAudioRecorder object assigns the output location of a soon-to-be new recording to this string's path. Finally, the object starts recording what the user is actually playing.  <a href="#ac1b0ee1f43f1a67475f94782398cb8df">More...</a><br/></td></tr>
+<tr class="separator:ac1b0ee1f43f1a67475f94782398cb8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bdc9e1a570a8151c9e6db5af6bd4fbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a6bdc9e1a570a8151c9e6db5af6bd4fbc">on_pushButton_Play_clicked</a> ()</td></tr>
-<tr class="memdesc:a6bdc9e1a570a8151c9e6db5af6bd4fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This button plays the audio file created by the most recent recording. The file name is stored in the QString recording.  <a href="#a6bdc9e1a570a8151c9e6db5af6bd4fbc">More...</a><br/></td></tr>
+<tr class="memdesc:a6bdc9e1a570a8151c9e6db5af6bd4fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the Play button on the UI piano is clicked, this slot sets the QMediaPlayer settings to the path of where the recording file was stored. It sets its volume, and finally, it plays the audio file of what the user previously recorded.  <a href="#a6bdc9e1a570a8151c9e6db5af6bd4fbc">More...</a><br/></td></tr>
 <tr class="separator:a6bdc9e1a570a8151c9e6db5af6bd4fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -367,16 +366,16 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a17ede32a3936ef702ef3efc51903dfcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Window for Music Sheets feature.  <a href="#a17ede32a3936ef702ef3efc51903dfcb">More...</a><br/></td></tr>
 <tr class="separator:a17ede32a3936ef702ef3efc51903dfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae54faf3abf6cd0bbad3b12a99521660b"><td class="memItemLeft" align="right" valign="top">QAudioRecorder *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae54faf3abf6cd0bbad3b12a99521660b">recorder</a></td></tr>
-<tr class="memdesc:ae54faf3abf6cd0bbad3b12a99521660b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object for recording audio.  <a href="#ae54faf3abf6cd0bbad3b12a99521660b">More...</a><br/></td></tr>
+<tr class="memdesc:ae54faf3abf6cd0bbad3b12a99521660b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an object, recorder, to be of type QAudioRecorder. Inherits all of its methods, including record() and stop().  <a href="#ae54faf3abf6cd0bbad3b12a99521660b">More...</a><br/></td></tr>
 <tr class="separator:ae54faf3abf6cd0bbad3b12a99521660b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b08dea2c9d868a001dd1332c868b2fe"><td class="memItemLeft" align="right" valign="top">QAudioEncoderSettings&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a3b08dea2c9d868a001dd1332c868b2fe">audioSettings</a></td></tr>
-<tr class="memdesc:a3b08dea2c9d868a001dd1332c868b2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object for setting audio settings for recording feature.  <a href="#a3b08dea2c9d868a001dd1332c868b2fe">More...</a><br/></td></tr>
+<tr class="memdesc:a3b08dea2c9d868a001dd1332c868b2fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an object, audiosettings, to be of type QAudioEncoderSettings. The object specifies the audio encoder settings and sets the desired properties.  <a href="#a3b08dea2c9d868a001dd1332c868b2fe">More...</a><br/></td></tr>
 <tr class="separator:a3b08dea2c9d868a001dd1332c868b2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81db738d1aaef0901c00c19ee95b2ee0"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a81db738d1aaef0901c00c19ee95b2ee0">recording</a></td></tr>
-<tr class="memdesc:a81db738d1aaef0901c00c19ee95b2ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds file name of currently recording/last recorded audio file.  <a href="#a81db738d1aaef0901c00c19ee95b2ee0">More...</a><br/></td></tr>
+<tr class="memdesc:a81db738d1aaef0901c00c19ee95b2ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an object, recording, to be of type QString. The object stores the current path of where the recording will take place.  <a href="#a81db738d1aaef0901c00c19ee95b2ee0">More...</a><br/></td></tr>
 <tr class="separator:a81db738d1aaef0901c00c19ee95b2ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a2ee7a30ed88f9a46d1064d0d56a507"><td class="memItemLeft" align="right" valign="top">QMediaPlayer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a3a2ee7a30ed88f9a46d1064d0d56a507">playRecording</a></td></tr>
-<tr class="memdesc:a3a2ee7a30ed88f9a46d1064d0d56a507"><td class="mdescLeft">&#160;</td><td class="mdescRight">For playing recorded audio files.  <a href="#a3a2ee7a30ed88f9a46d1064d0d56a507">More...</a><br/></td></tr>
+<tr class="memdesc:a3a2ee7a30ed88f9a46d1064d0d56a507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an object, playrecording, to be of type QMediaPlayer. The object allows us to provide the settings for the recorded file, set its volume, and actually play the recording back.  <a href="#a3a2ee7a30ed88f9a46d1064d0d56a507">More...</a><br/></td></tr>
 <tr class="separator:a3a2ee7a30ed88f9a46d1064d0d56a507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0fd085e327a5f646b88e41e5a63694"><td class="memItemLeft" align="right" valign="top">QMediaPlayer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aad0fd085e327a5f646b88e41e5a63694">players</a></td></tr>
 <tr class="memdesc:aad0fd085e327a5f646b88e41e5a63694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of 20 QMediaPlayers for use in playing the audio samples for the virtual instrument.  <a href="#aad0fd085e327a5f646b88e41e5a63694">More...</a><br/></td></tr>
@@ -2354,7 +2353,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This button plays the audio file created by the most recent recording. The file name is stored in the QString recording. </p>
+<p>When the Play button on the UI piano is clicked, this slot sets the QMediaPlayer settings to the path of where the recording file was stored. It sets its volume, and finally, it plays the audio file of what the user previously recorded. </p>
 
 </div>
 </div>
@@ -2379,7 +2378,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>When the Record button is pressed a .amr audio file with the current time as a name is created and set as the output location. Then using the computer's built in microphone a recording is made of the user's performance. </p>
+<p>When the Record button on the UI piano is clicked, this slot stores the current path of the program in a string. Then a QAudioRecorder object assigns the output location of a soon-to-be new recording to this string's path. Finally, the object starts recording what the user is actually playing. </p>
 
 </div>
 </div>
@@ -2502,7 +2501,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Object for setting audio settings for recording feature. </p>
+<p>Declares an object, audiosettings, to be of type QAudioEncoderSettings. The object specifies the audio encoder settings and sets the desired properties. </p>
 
 </div>
 </div>
@@ -2568,7 +2567,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>For playing recorded audio files. </p>
+<p>Declares an object, playrecording, to be of type QMediaPlayer. The object allows us to provide the settings for the recorded file, set its volume, and actually play the recording back. </p>
 
 </div>
 </div>
@@ -2590,7 +2589,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Object for recording audio. </p>
+<p>Declares an object, recorder, to be of type QAudioRecorder. Inherits all of its methods, including record() and stop(). </p>
 
 </div>
 </div>
@@ -2612,7 +2611,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Holds file name of currently recording/last recorded audio file. </p>
+<p>Declares an object, recording, to be of type QString. The object stores the current path of where the recording will take place. </p>
 
 </div>
 </div>
@@ -2736,7 +2735,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 5 2013 13:17:32 for VMT: Virtual Musical Typing by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 5 2013 14:44:48 for VMT: Virtual Musical Typing by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
